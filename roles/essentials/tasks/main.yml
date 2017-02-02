@@ -1,0 +1,31 @@
+---
+
+- name: Install curl.
+  homebrew:
+    name: curl
+    install_options: with-libidn,with-nghttp2
+
+# Not using "state: linked" because this would be executed every run
+- name: Link brewed curl.
+  shell: brew link --force curl
+  args:
+    creates: /usr/local/bin/curl
+
+- name: Install git.
+  homebrew:
+    name: git
+    install_options: with-brewed-curl,with-brewed-ssl
+
+- name: Install vim.
+  homebrew:
+    name: vim
+    install_options: with-override-system-vi
+
+- name: Install other essential brews.
+  homebrew:
+    name: "{{ item }}"
+  with_items:
+    - tree
+    - watch
+    - wget
+    - yarn

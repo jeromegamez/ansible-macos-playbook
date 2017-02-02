@@ -1,0 +1,69 @@
+---
+
+- name: Ensure Homebrew Taps
+  homebrew_tap:
+    tap: "{{ item }}"
+    state: present
+  with_items:
+    - caskroom/cask
+    - caskroom/fonts
+
+- name: Install casks
+  homebrew_cask:
+    name: "{{ item }}"
+  with_items:
+    - alfred
+    - cleanmymac
+    - dash
+    - fantastical
+    - font-fira-code
+    - gitup
+    - google-chrome
+    - gpgtools
+    - iterm2
+    - mailmate
+    - phpstorm
+    - sequel-pro
+    - skype
+    - slack
+    - sonos
+    - spotify
+    - sublime-text
+    - telegram-desktop
+    - tower
+    - whatsapp
+
+- include_role:
+    name: mas
+  tags: [mas]
+  vars:
+    mas_apps:
+      - { name: 1Blocker, id: 1107421413}
+      - { name: 1Password, id: 443987910}
+      - { name: Day One, id: 1055511498}
+      - { name: Patterns, id: 429449079}
+      - { name: Tweetbot, id: 557168941}
+    mas_upgrade_all_apps: yes
+
+- include_role:
+    name: dock
+  vars:
+    dock_apps:
+      - name: MailMate
+        path: /Applications/MailMate.app
+      - name: Fantastical 2
+        path: /Applications/Fantastical 2.app
+      - name: Slack
+        path: /Applications/Slack.app
+      - name: Nachrichten
+        path: /Applications/Messages.app
+      - name: Safari
+        path: /Applications/Safari.app
+      - name: Google Chrome
+        path: /Applications/Google Chrome.app
+      - name: Sublime Text
+        path: /Applications/Sublime Text.app
+      - name: Spotify
+        path: /Applications/Spotify.app
+      - name: iTerm
+        path: /Applications/iTerm.app

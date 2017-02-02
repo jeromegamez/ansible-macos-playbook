@@ -1,0 +1,20 @@
+---
+
+- name: Everything's gonna be alright
+  hosts: localhost
+
+  roles:
+    - name: essentials
+      tags: [essentials]
+
+    - name: shell
+      tags: [shell]
+
+    - name: yadm
+      tags: [yadm]
+
+    - name: macos-settings
+      tags: [settings]
+
+    - name: apps
+      tags: [apps]

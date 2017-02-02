@@ -1,0 +1,16 @@
+---
+
+- include: dock.yml
+  tags: [dock]
+
+- include: hot-corners.yml
+  tags: [hot-corners]
+
+- include: trackpad.yml
+  tags: [trackpad]
+
+- include: ssd.yml
+  tags: [ssd]
+
+- include: misc.yml
+  tags: [misc]
