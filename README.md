@@ -9,7 +9,7 @@ Advantages for me over using a shell script based setup
 - The documentation about what is done is right in the output,
   instead of only in the comments.
 - When a task doesn't work anymore, for example after a new macOS release,
-  I will now immediately which one and why.
+  I will know immediately which one and why.
 - It helps me to improve my Ansible skills :)
 
 My dotfiles are managed with [yadm](https://thelocehiliosan.github.io/yadm/)
