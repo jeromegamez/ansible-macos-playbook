@@ -14,7 +14,7 @@ Advantages for me over using a shell script based setup
 
 My dotfiles are managed with [yadm](https://thelocehiliosan.github.io/yadm/)
 and stored in a private git repository which is pulled in the first time
-the playbook is run. The repository is private because they include
+the playbook is run. The repository is private because it includes
 sensitive data like private keys and GitHub tokens. This approach
 allows me to only need the login data of the dotfiles repo
 provider when setting up a computer from scratch.
