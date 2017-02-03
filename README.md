@@ -1,4 +1,4 @@
-# Mac Bootstrap Ansible Playbook
+# Ansible MacOS Playbook
 
 This is the playbook I use after a clean install of MacOS to set everything up.
 
