@@ -28,3 +28,9 @@
     type: bool
     value: false
 
+- name: Use F keys as standard function keys.
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: com.apple.keyboard.fnState
+    type: int
+    value: 1
