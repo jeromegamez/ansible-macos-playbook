@@ -24,8 +24,9 @@
     global: yes
 
 - name: Install zsh-syntax-highlighting
-  homebrew:
-    name: zsh-syntax-highlighting
+  git:
+    repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+    dest: ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 - name: Register homebrewed ZSH
   become: yes
