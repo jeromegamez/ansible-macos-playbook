@@ -18,7 +18,11 @@
   homebrew:
     name: mariadb
     state: latest
-  register: mysql_install_result
+
+- name: Install dnsmasq
+  homebrew:
+    name: dnsmasq
+    state: latest
 
 - include: php.yml
   tags: [php]
