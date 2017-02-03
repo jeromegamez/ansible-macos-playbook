@@ -4,7 +4,8 @@ set -o errexit
 set -o errtrace
 set -o nounset
 
-cd "$(dirname "${BASH_SOURCE}")";
+REPO="https://github.com/jeromegamez/ansible-macos-playbook.git"
+TARGET_DIR="$HOME/Development/ansible-macos-playbook"
 
 if ! xcode-select --print-path &> /dev/null; then
   echo "Installing Command Line Tools"
@@ -37,6 +38,15 @@ if test ! $(which ansible); then
 else
   echo "Ansible is already installed"
 fi
+
+if [ ! -d "$TARGET_DIR" ]; then
+  echo "Cloning playbook repository"
+  mkdir -p "$TARGET_DIR" && git clone $REPO "$TARGET_DIR"
+else
+  echo "The playbook repository is already in place"
+fi
+
+cd "$TARGET_DIR"
 
 echo "Running the playbook"
 ansible-playbook main.yml

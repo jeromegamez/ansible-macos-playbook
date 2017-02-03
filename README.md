@@ -21,16 +21,30 @@ provider when setting up a computer from scratch.
 
 ## Installation
 
-1. Clone this repository
-2. Install Apple's Command Line Tools (`xcode-select --install`)
-3. Install [Homebrew](http://brew.sh)
-4. Install Ansible (`brew install ansible`)
-5. Run `ansible-playbook main.yml`
+### Automated
 
-or automated
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/jeromegamez/ansible-macos-playbook/master/install.sh)"
+```
 
-1. Clone this repository
-2. Run `bash install.sh`
+### Manual
+
+```bash
+# Install Apple's Command Line Tools
+xcode-select --install
+
+# Install Homebrew (see http://brew.sh)
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Install ansible
+brew install ansible
+
+# Clone this repository
+https://github.com/jeromegamez/ansible-macos-playbook.git
+
+# Run the playbook
+ansible-playbook main.yml
+```
 
 ## Acknowledgements
 
