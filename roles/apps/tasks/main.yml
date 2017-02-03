@@ -48,7 +48,9 @@
 
 - include_role:
     name: dock
+  tags: [dock]
   vars:
+    dock_remove_undefined: yes
     dock_apps:
       - name: MailMate
         path: /Applications/MailMate.app
