@@ -9,6 +9,9 @@
 - include: trackpad.yml
   tags: [trackpad]
 
+- include: screensaver.yml
+  tags: [screensaver]
+
 - include: ssd.yml
   tags: [ssd]
 

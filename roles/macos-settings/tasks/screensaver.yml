@@ -1,0 +1,30 @@
+---
+
+- name: Install custom screensaver.
+  homebrew_cask:
+    name: fliqlo
+
+# osx_defaults hasn't dict support yet.
+- name: Get currently active screensaver.
+  shell: defaults -currentHost read com.apple.screensaver
+  register: active_screensaver_result
+  check_mode: no
+  changed_when: false
+
+- name: Activate custom screensaver, if needed.
+  shell: defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string "Fliqlo" path -string "/Users/jg/Library/Screen Savers/Fliqlo.saver" type -int 0
+  when: "{{ 'moduleName = Fliqlo' not in active_screensaver_result.stdout }}"
+
+- name: Ask for a password when leaving the screensaver.
+  osx_defaults:
+    domain: com.apple.screensaver
+    key: askForPassword
+    type: int
+    value: 1
+
+- name: Set password delay to 5 seconds.
+  osx_defaults:
+    domain: com.apple.screensaver
+    key: askForPasswordDelay
+    type: float
+    value: 5
