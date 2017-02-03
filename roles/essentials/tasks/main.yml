@@ -3,6 +3,7 @@
 - name: Install curl.
   homebrew:
     name: curl
+    state: latest
     install_options: with-libidn,with-nghttp2
 
 # Not using "state: linked" because this would be executed every run
@@ -14,16 +15,19 @@
 - name: Install git.
   homebrew:
     name: git
+    state: latest
     install_options: with-brewed-curl,with-brewed-ssl
 
 - name: Install vim.
   homebrew:
     name: vim
+    state: latest
     install_options: with-override-system-vi
 
 - name: Install other essential brews.
   homebrew:
     name: "{{ item }}"
+    state: latest
   with_items:
     - tree
     - watch

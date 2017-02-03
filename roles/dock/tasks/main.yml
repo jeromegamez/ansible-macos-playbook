@@ -3,7 +3,7 @@
 - name: Ensure required tools.
   homebrew:
     name: dockutil
-    state: present
+    state: latest
 
 - name: Get apps currently in Dock.
   shell: "dockutil --list | grep 'persistent-apps' | cut -d$'\t' -f1"

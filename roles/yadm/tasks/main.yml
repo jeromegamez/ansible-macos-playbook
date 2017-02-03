@@ -3,7 +3,7 @@
 - name: Ensure yadm is installed.
   homebrew:
     name: yadm
-    state: present
+    state: latest
 
 - name: Fetch dotfiles.
   shell: yadm clone {{ yadm_repo_url }}
