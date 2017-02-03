@@ -1,0 +1,25 @@
+---
+
+- name: Install AWS tools.
+  homebrew:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - awscli
+    - aws-shell
+
+- name: Install NGINX.
+  homebrew:
+    name: nginx
+    state: latest
+    install_options: with-gunzip,with-http2
+
+- name: Install MariaDB.
+  homebrew:
+    name: mariadb
+    state: latest
+  register: mysql_install_result
+
+- include: php.yml
+  tags: [php]
+

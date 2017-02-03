@@ -1,0 +1,47 @@
+---
+
+- name: Tap PHP in Homebrew.
+  homebrew_tap:
+    name: homebrew/php
+
+- name: Install PHP.
+  homebrew:
+    name: php71
+    state: latest
+    install_options: with-homebrew-curl,with-homebrew-libxml2,with-homebrew-libxslt,with-phpdbg
+
+- name: Install PHP extensions.
+  homebrew:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - php71-apcu
+    - php71-intl
+    - php71-mcrypt
+    - php71-opcache
+    - php71-xdebug
+
+- name: Install composer.
+  homebrew:
+    name: composer
+    state: latest
+
+- name: Install Symfony Installer.
+  homebrew:
+    name: symfony-installer
+    state: latest
+
+- name: Get globally installed packages
+  shell: composer global info
+  register: composer_global_info
+  changed_when: false
+  check_mode: no
+
+- name: Install global composer packages.
+  shell: composer global require {{ item }}
+  with_items:
+    - pyrech/composer-changelogs
+    - hirak/prestissimo
+    - laravel/installer
+    - laravel/valet
+  when: item not in composer_global_info.stdout

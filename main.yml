@@ -13,6 +13,9 @@
     - name: yadm
       tags: [yadm]
 
+    - name: dev
+      tags: [dev]
+
     - name: macos-settings
       tags: [settings]
 
