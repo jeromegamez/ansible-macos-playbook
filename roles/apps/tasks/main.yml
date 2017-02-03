@@ -14,6 +14,7 @@
   with_items:
     - alfred
     - cleanmymac
+    - cloak
     - dash
     - fantastical
     - font-fira-code
