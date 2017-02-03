@@ -18,8 +18,8 @@
 - name: Disable recording of last access times.
   become: true
   copy:
-    src: files/com.nullvision.noatime.plist
-    dest: /Library/LaunchDaemons/com.nullvision.noatime.plist
+    src: files/com.noatime.plist
+    dest: /Library/LaunchDaemons/com.noatime.plist
     owner: root
     group: wheel
 
