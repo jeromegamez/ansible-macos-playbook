@@ -1,6 +1,6 @@
 ---
 
-- name: Everything's gonna be alright
+- name: Everything's gonna be alright.
   hosts: localhost
 
   roles:

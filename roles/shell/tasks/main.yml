@@ -1,40 +1,40 @@
 ---
 
-- name: Install ZSH
+- name: Install ZSH.
   homebrew:
     name: "{{ item }}"
   with_items:
     - yarn # Includes node and npm
     - zsh
 
-- name: Hush login
+- name: Hush login.
   file:
     path: ~/.hushlogin
     state: touch
   changed_when: false
 
-- name: Clone oh-my-zsh
+- name: Clone oh-my-zsh.
   git:
     repo: https://github.com/robbyrussell/oh-my-zsh.git
     dest: ~/.oh-my-zsh
 
-- name: Install pure prompt
+- name: Install pure prompt.
   npm:
     name: pure-prompt
     global: yes
 
-- name: Install zsh-syntax-highlighting
+- name: Install zsh-syntax-highlighting.
   git:
     repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
     dest: ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-- name: Register homebrewed ZSH
+- name: Register homebrewed ZSH as globally available shell.
   become: yes
   lineinfile:
     dest: '/etc/shells'
     line: "/usr/local/bin/zsh"
 
-- name: Set ZSH as shell for {{ ansible_user_id }}
+- name: Set ZSH as shell for {{ ansible_user_id }}.
   become: yes
   user:
     name: "{{ ansible_user_id }}"

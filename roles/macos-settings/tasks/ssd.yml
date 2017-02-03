@@ -1,21 +1,21 @@
 ---
 
-- name: Disable local Time Machine snapshots
+- name: Disable local Time Machine snapshots.
   become: true
   shell: tmutil disablelocal
   changed_when: false
 
-- name: Disable hibernation (speeds up entering sleep mode)
+- name: Disable hibernation (speeds up entering sleep mode).
   become: true
   shell: pmset -a hibernatemode 0
   changed_when: false
 
-- name: Disable sudden motion sensor
+- name: Disable sudden motion sensor.
   become: true
   shell: pmset -a sms 0
   changed_when: false
 
-- name: Disable recording of last access times
+- name: Disable recording of last access times.
   become: true
   copy:
     src: files/com.nullvision.noatime.plist
@@ -23,7 +23,7 @@
     owner: root
     group: wheel
 
-- name: Get sleepimage stats
+- name: Get sleepimage stats.
   stat:
     path: /private/var/vm/sleepimage
   register: sleepimage
@@ -32,14 +32,14 @@
   set_fact:
     sleepimage_needs_to_be_recreated: (sleepimage.stat.exists and sleepimage.stat.size > 0) or not sleepimage.stat.exists
 
-- name: Remove sleepimage
+- name: Remove sleepimage.
   become: true
   file:
     path: /private/var/vm/sleepimage
     state: absent
   when: sleepimage_needs_to_be_recreated
 
-- name: Touch sleepimage
+- name: Touch sleepimage.
   become: true
   file:
     path: /private/var/vm/sleepimage
@@ -49,7 +49,7 @@
     mode: 0600
   when: sleepimage_needs_to_be_recreated
 
-- name: Set chflags on sleepimage
+- name: Set chflags on sleepimage.
   become: true
   shell: chflags uchg /private/var/vm/sleepimage
   when: sleepimage_needs_to_be_recreated

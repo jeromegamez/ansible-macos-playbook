@@ -1,6 +1,6 @@
 ---
 
-- name: Ensure Homebrew Taps
+- name: Ensure Homebrew Taps.
   homebrew_tap:
     tap: "{{ item }}"
     state: present
@@ -8,7 +8,7 @@
     - caskroom/cask
     - caskroom/fonts
 
-- name: Install casks
+- name: Install casks.
   homebrew_cask:
     name: "{{ item }}"
   with_items:

@@ -1,13 +1,13 @@
 ---
 
-- name: Disable Dashboard
+- name: Disable Dashboard.
   osx_defaults:
     domain: com.apple.dashboard
     key: mcx-disabled
     type: bool
     value: true
 
-- name: Disable auto correct
+- name: Disable auto correct.
   osx_defaults:
     domain: NSGlobalDomain
     key: NSAutomaticSpellingCorrectionEnabled

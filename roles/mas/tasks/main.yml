@@ -35,7 +35,7 @@
   with_items: "{{ mas_apps }}"
   when: "'{{ item.id|default(item) }}' not in mas_list.stdout"
 
-- name: Upgrade all apps
+- name: Upgrade all apps.
   shell: mas upgrade
   when: mas_upgrade_all_apps
   register: mas_upgrade_result

@@ -27,7 +27,7 @@
   register: tap_to_click_result
   ignore_errors: true
 
-- name: Enable tap to click for the current user (retry)
+- name: Enable tap to click for the current user (retry).
   osx_defaults:
     domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
     key: Clicking

@@ -1,13 +1,13 @@
 ---
 
-- name: Ensure taps are tapped
+- name: Ensure taps are tapped.
   homebrew_tap:
     tap: "{{ item }}"
     state: present
   with_items: "{{ homebrew_taps }}"
   when: homebrew_taps|length > 0
 
-- name: "Ensure packages"
+- name: Ensure packages.
   homebrew:
     name: "{{ item.key }}"
     state: "{{ item.value.state | default('present') }}"
