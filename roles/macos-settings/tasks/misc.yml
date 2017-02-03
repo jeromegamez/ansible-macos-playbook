@@ -7,14 +7,6 @@
     type: bool
     value: true
 
-- name: Disable Launchpad gesture
-  osx_defaults:
-    domain: com.apple.dock
-    key: showLaunchpadGestureEnabled
-    type: int
-    value: 0
-  notify: Restart Dock
-
 - name: Disable auto correct
   osx_defaults:
     domain: NSGlobalDomain
