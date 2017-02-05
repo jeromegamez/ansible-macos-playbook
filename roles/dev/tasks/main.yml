@@ -1,12 +1,22 @@
 ---
 
-- name: Install AWS tools.
+- name: Install tools (homebrew).
   homebrew:
     name: "{{ item }}"
     state: latest
   with_items:
     - awscli
     - aws-shell
+    - dnsmasq
+    - docker-cloud
+    - mariadb
+    - terraform
+    - terraform-inventory
+
+- name: Install tools (npm global).
+  npm:
+    name: firebase-tools
+    global: yes
 
 - name: Install NGINX.
   homebrew:
@@ -14,16 +24,8 @@
     state: latest
     install_options: with-gunzip,with-http2
 
-- name: Install MariaDB.
-  homebrew:
-    name: mariadb
-    state: latest
-
-- name: Install dnsmasq
-  homebrew:
-    name: dnsmasq
-    state: latest
-
 - include: php.yml
   tags: [php]
 
+- include: vagrant.yml
+  tags: [vagrant]
