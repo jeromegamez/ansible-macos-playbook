@@ -18,6 +18,13 @@
     name: firebase-tools
     global: yes
 
+- name: Install python libraries
+  pip:
+    name: "{{ item }}"
+  with_items:
+    - "passlib[bcrypt]"
+    - Sphinx
+
 - name: Install NGINX.
   homebrew:
     name: nginx
