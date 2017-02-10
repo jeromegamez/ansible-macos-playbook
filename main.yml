@@ -19,5 +19,12 @@
     - name: macos-settings
       tags: [settings]
 
+    - name: settings/hostname
+      tags: [hostname]
+      vars:
+        computername: Kerngehäuse
+        hostname: kerngehaeuse
+        localhostname: kerngehaeuse
+
     - name: apps
       tags: [apps]
