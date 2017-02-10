@@ -26,5 +26,8 @@
         hostname: kerngehaeuse
         localhostname: kerngehaeuse
 
+    - name: settings/system
+      tags: [settings-system]
+
     - name: apps
       tags: [apps]
