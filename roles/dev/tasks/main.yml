@@ -9,14 +9,19 @@
     - aws-shell
     - dnsmasq
     - docker-cloud
+    - gitlab-ci-multi-runner
+    - httpie
     - mariadb
     - terraform
     - terraform-inventory
 
 - name: Install tools (npm global).
   npm:
-    name: firebase-tools
+    name: "{{ item }}"
     global: yes
+  with_items:
+    - firebase-tools
+    - gulp
 
 - name: Install python libraries
   pip:
