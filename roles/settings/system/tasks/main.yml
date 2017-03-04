@@ -13,6 +13,7 @@
     key: NSNavPanelExpandedStateForSaveMode
     type: bool
     value: "{{ expand_save_panel_by_default|bool }}"
+  notify: Restart Finder
 
 - name: Expand print panel by default ({{ expand_print_panel_by_default }})
   osx_defaults:
@@ -20,4 +21,23 @@
     key: PMPrintingExpandedStateForPrint
     type: bool
     value: "{{ expand_print_panel_by_default|bool }}"
+  notify: Restart Finder
+
+- name: Show extension warning ({{ show_file_extensions_warning }})
+  osx_defaults:
+    domain: com.apple.finder
+    key: FXEnableExtensionChangeWarning
+    type: bool
+    value: "{{ show_file_extensions_warning|bool }}"
+  notify: Restart Finder
+
+- name: Warn before emptying the trash ({{ warn_before_emptying_the_trash }})
+  osx_defaults:
+    domain: com.apple.finder
+    key: WarnOnEmptyTrash
+    type: bool
+    value: "{{ warn_before_emptying_the_trash|bool }}"
+  notify: Restart Finder
+
+
 
