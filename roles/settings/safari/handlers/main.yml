@@ -1,0 +1,5 @@
+---
+
+- name: Restart Safari
+  shell: killall Safari
+  failed_when: false

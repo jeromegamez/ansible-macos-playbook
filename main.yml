@@ -26,6 +26,9 @@
         hostname: kerngehaeuse
         localhostname: kerngehaeuse
 
+    - name: settings/safari
+      tags: [settings-safari]
+
     - name: settings/system
       tags: [settings-system]
 
