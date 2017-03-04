@@ -53,3 +53,11 @@
   become: true
   shell: chflags uchg /private/var/vm/sleepimage
   when: sleepimage_needs_to_be_recreated
+
+- name: Turn off network indexing
+  become: true
+  osx_defaults:
+    domain: /Library/Preferences/com.apple.SpotlightServer.plist
+    key: ExternalVolumesIgnore
+    type: bool
+    value: true

@@ -12,8 +12,8 @@
 - include: screensaver.yml
   tags: [screensaver]
 
-- include: ssd.yml
-  tags: [ssd]
+- include: performance.yml
+  tags: [performance]
 
 - include: misc.yml
   tags: [misc]
