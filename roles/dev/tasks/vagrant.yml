@@ -20,3 +20,10 @@
     - vagrant-bindfs
     - vagrant-hostmanager
   when: "'{{ item }}' not in vagrant_plugin_list.stdout"
+
+- name: Copy vagrant sudoers configuration.
+  become: true
+  copy:
+    src: files/sudoers.d/vagrant
+    dest: /etc/sudoers.d/vagrant
+    mode: 0644
