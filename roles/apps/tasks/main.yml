@@ -8,6 +8,18 @@
     - caskroom/cask
     - caskroom/fonts
 
+- name: Install FFmpeg
+  homebrew:
+    name: ffmpeg
+    state: latest
+    install_options: with-chromaprint,with-fdk-aac,with-fontconfig,with-freetype,with-libvorbis,with-openh264,with-openssl,with-opus,with-rtmpdump,with-theora,with-tools,with-two-lame,with-wavpack,with-x265
+
+- name: Install homebrew apps.
+  homebrew:
+    name: "{{ item }}"
+  with_items:
+    - youtube-dl
+
 - name: Install casks.
   homebrew_cask:
     name: "{{ item }}"
@@ -17,14 +29,18 @@
     - cleanmymac
     - cloak
     - dash
-    - docker
     - fantastical
     - font-fira-code
+    - font-roboto
+    - font-roboto-condensed
+    - font-roboto-mono
     - gitup
     - google-chrome
     - gpgtools
     - iterm2
+    - java
     - kaleidoscope
+    - lastfm
     - mailmate
     - paw
     - plug
@@ -47,10 +63,13 @@
     mas_apps:
       - { name: 1Blocker, id: 1107421413}
       - { name: 1Password, id: 443987910}
+      - { name: Bear, id: 1091189122}
       - { name: Day One, id: 1055511498}
+      - { name: Keynote, id: 409183694}
       - { name: Pages, id: 409201541}
       - { name: Patterns, id: 429449079}
       - { name: Pixelmator, id: 407963104}
+      - { name: Reeder, id: 880001334}
       - { name: Tweetbot, id: 557168941}
     mas_upgrade_all_apps: yes
 
