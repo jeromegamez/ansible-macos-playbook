@@ -2,4 +2,7 @@
 
 - name: "Install docker."
   homebrew_cask:
-    name: docker
+    name: "{{ item }}"
+  with_items:
+    - docker
+    - kitematic
