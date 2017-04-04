@@ -11,6 +11,7 @@
     - docker-cloud
     - gitlab-ci-multi-runner
     - httpie
+    - md5sha1sum
     - mysql
     - terraform
     - terraform-inventory
