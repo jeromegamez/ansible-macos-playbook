@@ -1,9 +1,8 @@
 ---
 
 - name: Update Homebrew
-  shell: brew update --force
-  changed_when: false
-  check_mode: no
+  homebrew:
+    update_homebrew: yes
 
 - name: Install curl.
   homebrew:
