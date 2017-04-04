@@ -1,0 +1,13 @@
+---
+
+- name: "Install Kubernetes components."
+  homebrew:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - docker-machine-driver-xhyve
+    - kubectl
+
+- name: "Install minikube."
+  homebrew_cask:
+    name: minikube

@@ -8,7 +8,6 @@
     - awscli
     - aws-shell
     - dnsmasq
-    - docker-cloud
     - gitlab-ci-multi-runner
     - httpie
     - md5sha1sum
@@ -42,3 +41,10 @@
 
 - include: vagrant.yml
   tags: [vagrant]
+
+- include: docker.yml
+  tags: [docker]
+
+- include: kubernetes.yml
+  tags: [kubernetes]
+
