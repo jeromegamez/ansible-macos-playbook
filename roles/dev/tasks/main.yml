@@ -11,7 +11,7 @@
     - docker-cloud
     - gitlab-ci-multi-runner
     - httpie
-    - mariadb
+    - mysql
     - terraform
     - terraform-inventory
 
