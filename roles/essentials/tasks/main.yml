@@ -16,6 +16,12 @@
   args:
     creates: /usr/local/bin/curl
 
+- name: Install gnu-sed
+  homebrew:
+    name: gnu-sed
+    state: latest
+    install_options: with-default-names
+
 - name: Install git.
   homebrew:
     name: git
