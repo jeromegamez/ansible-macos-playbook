@@ -15,6 +15,12 @@
     - terraform
     - terraform-inventory
 
+- name: Install a newer version of make.
+  homebrew:
+    name: make
+    state: latest
+    install_options: with-default-names
+
 - name: Install tools (npm global).
   npm:
     name: "{{ item }}"
