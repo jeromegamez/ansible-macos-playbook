@@ -63,6 +63,7 @@
     mas_apps:
       - { name: 1Blocker, id: 1107421413}
       - { name: 1Password, id: 443987910}
+      - { name: Amphetamine, id: 937984704}
       - { name: Bear, id: 1091189122}
       - { name: Day One, id: 1055511498}
       - { name: Keynote, id: 409183694}
