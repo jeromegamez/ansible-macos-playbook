@@ -10,6 +10,7 @@
     - dnsmasq
     - gitlab-ci-multi-runner
     - httpie
+    - jq
     - md5sha1sum
     - mysql
     - terraform

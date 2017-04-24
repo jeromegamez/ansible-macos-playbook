@@ -16,6 +16,7 @@
     state: latest
   with_items:
     - php71-apcu
+    - php71-gmp
     - php71-intl
     - php71-mcrypt
     - php71-opcache
