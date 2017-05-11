@@ -1,8 +1,12 @@
 ---
 
-- name: "Install docker."
-  homebrew_cask:
+- name: Install tools (homebrew).
+  homebrew:
     name: "{{ item }}"
+    state: latest
   with_items:
     - docker
-    - kitematic
+    - docker-compose
+    - docker-credential-helper
+    - docker-machine
+    - docker-machine-driver-xhyve
