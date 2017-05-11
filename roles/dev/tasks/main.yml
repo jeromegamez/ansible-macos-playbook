@@ -8,6 +8,7 @@
     - awscli
     - aws-shell
     - dnsmasq
+    - doctl
     - gitlab-ci-multi-runner
     - httpie
     - jq
