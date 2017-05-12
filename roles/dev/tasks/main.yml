@@ -9,7 +9,6 @@
     - aws-shell
     - dnsmasq
     - doctl
-    - gitlab-ci-multi-runner
     - httpie
     - jq
     - md5sha1sum
@@ -43,6 +42,16 @@
     name: nginx
     state: latest
     install_options: with-gunzip,with-http2
+
+- name: Install GitLab CI runner
+  shell: curl --output /usr/local/bin/gitlab-runner https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-ci-multi-runner-darwin-amd64
+  args:
+    creates: /usr/local/bin/gitlab-runner
+
+- name: Make GitLab CI runner executable
+  file:
+    path: /usr/local/bin/gitlab-runner
+    mode: a+x
 
 - include: php.yml
   tags: [php]
