@@ -24,7 +24,7 @@
 - name: Add items.
   shell: "dockutil --add '{{ item.1.path }}' --label '{{ item.1.name }}' --no-restart"
   with_indexed_items: "{{ dock_apps }}"
-  when: "not '{{ item.1.name }}' in dock_current_apps.stdout_lines"
+  when: dock_current_apps.stdout.find(item.1.name) == -1
   notify: Restart Dock
 
 - name: Refresh apps currently in Dock.
@@ -36,5 +36,5 @@
 - name: Ensure app order.
   shell: dockutil --move '{{ item.1.name }}' --position {{ item.0 | int + 1 }} --no-restart
   with_indexed_items: "{{ dock_apps }}"
-  when: "'{{ item.1.name }}' != '{{ dock_current_apps.stdout_lines[item.0] }}'"
+  when: dock_current_apps.stdout_lines[item.0].find(item.1.name) == -1
   notify: Restart Dock

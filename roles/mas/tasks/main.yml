@@ -31,12 +31,12 @@
   check_mode: no
 
 - name: Ensure configured MAS apps are installed.
-  shell: mas install "{{ item.id|default(item) }}"
+  shell: mas install "{{ item.id }}"
   with_items: "{{ mas_apps }}"
-  when: "'{{ item.id|default(item) }}' not in mas_list.stdout"
+  when: mas_list.stdout.find(item.id|string) == -1
 
 - name: Upgrade all apps.
   shell: mas upgrade
   when: mas_upgrade_all_apps
   register: mas_upgrade_result
-  changed_when: "{{ 'Everything is up-to-date' not in mas_upgrade_result.stdout }}"
+  changed_when: "'Everything is up-to-date' not in mas_upgrade_result.stdout"

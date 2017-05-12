@@ -13,7 +13,7 @@
 
 - name: Activate custom screensaver, if needed.
   shell: defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string "Fliqlo" path -string "/Users/jg/Library/Screen Savers/Fliqlo.saver" type -int 0
-  when: "{{ 'moduleName = Fliqlo' not in active_screensaver_result.stdout }}"
+  when: "'moduleName = Fliqlo' not in active_screensaver_result.stdout"
 
 - name: Ask for a password when leaving the screensaver.
   osx_defaults:

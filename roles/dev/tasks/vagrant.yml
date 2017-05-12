@@ -19,7 +19,7 @@
   with_items:
     - vagrant-bindfs
     - vagrant-hostmanager
-  when: "'{{ item }}' not in vagrant_plugin_list.stdout"
+  when: item not in vagrant_plugin_list.stdout
 
 - name: Copy vagrant sudoers configuration.
   become: true
