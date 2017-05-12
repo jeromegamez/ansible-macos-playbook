@@ -50,9 +50,6 @@
 - include: vagrant.yml
   tags: [vagrant]
 
-- include: docker.yml
-  tags: [docker]
-
 - include: kubernetes.yml
   tags: [kubernetes]
 
