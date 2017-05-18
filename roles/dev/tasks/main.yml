@@ -28,6 +28,7 @@
     global: yes
   with_items:
     - firebase-tools
+    - git-standup
     - gulp
 
 - name: Install python libraries
