@@ -71,6 +71,7 @@
       - { name: Patterns, id: 429449079}
       - { name: Pixelmator, id: 407963104}
       - { name: Reeder, id: 880001334}
+      - { name: Things, id: 904280696}
       - { name: Tweetbot, id: 557168941}
     mas_upgrade_all_apps: yes
 
