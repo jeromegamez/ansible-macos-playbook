@@ -6,6 +6,7 @@
     state: present
   with_items:
     - caskroom/cask
+    - caskroom/drivers
     - caskroom/fonts
 
 - name: Install FFmpeg
