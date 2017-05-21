@@ -7,6 +7,7 @@
   with_items:
     - awscli
     - aws-shell
+    - ctop
     - dnsmasq
     - doctl
     - httpie
