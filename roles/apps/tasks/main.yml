@@ -8,6 +8,7 @@
     - caskroom/cask
     - caskroom/drivers
     - caskroom/fonts
+    - buo/cask-upgrade
 
 - name: Install FFmpeg
   homebrew:
