@@ -57,6 +57,7 @@
     - telegram-desktop
     - transmit
     - tower
+    - vlc
     - whatsapp
 
 - include_role:
