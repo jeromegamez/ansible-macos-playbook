@@ -5,6 +5,7 @@
     name: "{{ item }}"
     state: latest
   with_items:
+    - asciinema
     - awscli
     - aws-shell
     - ctop
