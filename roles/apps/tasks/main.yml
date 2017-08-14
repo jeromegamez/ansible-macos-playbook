@@ -66,18 +66,19 @@
   tags: [mas]
   vars:
     mas_apps:
-      - { name: 1Blocker, id: 1107421413}
-      - { name: 1Password, id: 443987910}
-      - { name: Amphetamine, id: 937984704}
-      - { name: Bear, id: 1091189122}
-      - { name: Day One, id: 1055511498}
-      - { name: Keynote, id: 409183694}
-      - { name: Pages, id: 409201541}
-      - { name: Patterns, id: 429449079}
-      - { name: Pixelmator, id: 407963104}
-      - { name: Reeder, id: 880001334}
-      - { name: Things, id: 904280696}
-      - { name: Tweetbot, id: 557168941}
+      - { name: 1Blocker, id: 1107421413 }
+      - { name: 1Password, id: 443987910 }
+      - { name: Amphetamine, id: 937984704 }
+      - { name: Bear, id: 1091189122 }
+      - { name: Day One, id: 1055511498 }
+      - { name: Keynote, id: 409183694 }
+      - { name: Neptunes, id: 1006739057 }
+      - { name: Pages, id: 409201541 }
+      - { name: Patterns, id: 429449079 }
+      - { name: Pixelmator, id: 407963104 }
+      - { name: Reeder, id: 880001334 }
+      - { name: Things, id: 904280696 }
+      - { name: Tweetbot, id: 557168941 }
     mas_upgrade_all_apps: yes
 
 - include_role:
