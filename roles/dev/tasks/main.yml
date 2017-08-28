@@ -11,6 +11,7 @@
     - ctop
     - dnsmasq
     - doctl
+    - thefuck
     - httpie
     - jq
     - md5sha1sum
