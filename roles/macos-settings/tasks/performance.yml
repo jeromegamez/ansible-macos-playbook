@@ -1,10 +1,5 @@
 ---
 
-- name: Disable local Time Machine snapshots.
-  become: true
-  shell: tmutil disablelocal
-  changed_when: false
-
 - name: Disable hibernation (speeds up entering sleep mode).
   become: true
   shell: pmset -a hibernatemode 0
