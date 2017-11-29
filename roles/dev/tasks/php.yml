@@ -27,11 +27,6 @@
     name: composer
     state: latest
 
-- name: Install Symfony Installer.
-  homebrew:
-    name: symfony-installer
-    state: latest
-
 - name: Get globally installed packages
   shell: composer global info
   register: composer_global_info
