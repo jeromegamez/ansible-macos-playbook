@@ -4,7 +4,7 @@
   osx_defaults:
     domain: com.apple.dock
     key: tilesize
-    type: int
+    type: float
     value: 36
   notify: Restart Dock
 
