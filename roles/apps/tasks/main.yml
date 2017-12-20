@@ -28,7 +28,6 @@
   with_items:
     - alfred
     - bartender
-    - box-sync
     - cleanmymac
     - cloak
     - dash
