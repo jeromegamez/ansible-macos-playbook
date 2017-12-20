@@ -12,9 +12,7 @@
     - docker
     - docker-completion
     - docker-compose
-    - docker-compose-completion
     - docker-credential-helper
     - docker-machine
-    - docker-machine-completion
     - docker-machine-driver-xhyve
     - dinghy
