@@ -1,5 +1,5 @@
 ---
 
-computername: false
-hostname: false
-localhostname: false
+computername: null
+hostname: null
+localhostname: null

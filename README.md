@@ -46,6 +46,12 @@ https://github.com/jeromegamez/ansible-macos-playbook.git
 ansible-playbook main.yml
 ```
 
+### Variables
+
+If you want to use this playbook for your own computer, fork the repository and
+execute `cp vars/defaults.yml vars/${USER}.yml` - you can change any variable
+in that file however you like.
+
 ## Acknowledgements
 
 This playbook is heavily inspired by
