@@ -57,15 +57,15 @@
     path: /usr/local/bin/gitlab-runner
     mode: a+x
 
-- include: php.yml
+- import_tasks: php.yml
   tags: [php]
 
-- include: vagrant.yml
+- import_tasks: vagrant.yml
   tags: [vagrant]
 
-- include: docker.yml
+- import_tasks: docker.yml
   tags: [docker]
 
-- include: kubernetes.yml
+- import_tasks: kubernetes.yml
   tags: [kubernetes]
 

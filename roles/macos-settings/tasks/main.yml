@@ -1,19 +1,19 @@
 ---
 
-- include: dock.yml
+- import_tasks: dock.yml
   tags: [dock]
 
-- include: hot-corners.yml
+- import_tasks: hot-corners.yml
   tags: [hot-corners]
 
-- include: trackpad.yml
+- import_tasks: trackpad.yml
   tags: [trackpad]
 
-- include: screensaver.yml
+- import_tasks: screensaver.yml
   tags: [screensaver]
 
-- include: performance.yml
+- import_tasks: performance.yml
   tags: [performance]
 
-- include: misc.yml
+- import_tasks: misc.yml
   tags: [misc]
