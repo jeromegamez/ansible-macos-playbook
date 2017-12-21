@@ -1,6 +1,7 @@
 ---
 
 ## essentials
+
 # install_curl: no
 # install_gnu_sed: no
 # install_git: no
@@ -9,6 +10,14 @@
 # install_wget: no
 
 ## hostname settings
+
 # computername: "My computer"
 # hostname: "my-computer"
 # localhostname: "my-computer"
+
+## dev apps
+
+# install_docker: no
+# install_kubernetes: no
+# install_php: no
+# install_vagrant: no

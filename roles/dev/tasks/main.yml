@@ -59,13 +59,17 @@
 
 - import_tasks: php.yml
   tags: [php]
+  when: install_php
 
 - import_tasks: vagrant.yml
   tags: [vagrant]
+  when: install_vagrant
 
 - import_tasks: docker.yml
   tags: [docker]
+  when: install_docker
 
 - import_tasks: kubernetes.yml
   tags: [kubernetes]
+  when: install_kubernetes
 

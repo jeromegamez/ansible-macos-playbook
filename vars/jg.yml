@@ -12,3 +12,9 @@ install_wget: yes
 computername: Kerngehäuse
 hostname: kerngehaeuse
 localhostname: kerngehaeuse
+
+## dev apps
+install_docker: no
+install_kubernetes: no
+install_php: yes
+install_vagrant: no
