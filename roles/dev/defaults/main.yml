@@ -6,3 +6,9 @@ install_php: no
 install_vagrant: no
 
 homebrew_php_basename: php72
+homebrew_php_extensions:
+  - "{{ homebrew_php_basename }}-apcu"
+  - "{{ homebrew_php_basename }}-gmp"
+  - "{{ homebrew_php_basename }}-intl"
+  - "{{ homebrew_php_basename }}-opcache"
+  - "{{ homebrew_php_basename }}-xdebug"

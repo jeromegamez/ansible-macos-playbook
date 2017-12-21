@@ -14,13 +14,7 @@
   homebrew:
     name: "{{ item }}"
     state: latest
-  with_items:
-    - "{{ homebrew_php_basename }}-apcu"
-    - "{{ homebrew_php_basename }}-gmp"
-    - "{{ homebrew_php_basename }}-intl"
-    - "{{ homebrew_php_basename }}-mcrypt"
-    - "{{ homebrew_php_basename }}-opcache"
-    - "{{ homebrew_php_basename }}-xdebug"
+  with_items: "{{ homebrew_php_extensions }}"
 
 - name: Install composer.
   homebrew:
