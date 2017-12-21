@@ -3,6 +3,13 @@
 - name: Everything's gonna be alright.
   hosts: localhost
 
+  pre_tasks:
+    - include_vars: "{{ item }}"
+      with_first_found:
+        - "{{ ansible_env.USER }}.yml"
+        - "defaults.yml"
+      tags: [always]
+
   roles:
     - name: essentials
       tags: [essentials]
@@ -21,10 +28,6 @@
 
     - name: settings/hostname
       tags: [hostname]
-      vars:
-        computername: Kerngehäuse
-        hostname: kerngehaeuse
-        localhostname: kerngehaeuse
 
     - name: settings/safari
       tags: [settings-safari]

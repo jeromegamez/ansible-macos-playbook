@@ -5,7 +5,7 @@
     name: mas
     state: present
 
-- include: get_account_status.yml
+- import_tasks: get_account_status.yml
 
 - name: Sign in with dialog.
   shell: mas signin "{{ mas_email }}" --dialog
@@ -16,7 +16,7 @@
   shell: mas signin "{{ mas_email }}" "{{ mas_password }}"
   when: not mas_is_signed_in and mas_email and mas_password
 
-- include: get_account_status.yml
+- import_tasks: get_account_status.yml
   when: not mas_is_signed_in
 
 - name: Fail if still not signed in.

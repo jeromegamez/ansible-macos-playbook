@@ -28,11 +28,11 @@
   with_items:
     - alfred
     - bartender
-    - box-sync
     - cleanmymac
-    - cloak
+    - encryptme
     - dash
     - fantastical
+    - firefox
     - font-fira-code
     - font-roboto
     - font-roboto-condensed
@@ -43,14 +43,11 @@
     - iterm2
     - java
     - kaleidoscope
-    - keepassx
-    - lastfm
     - mailmate
     - paw
     - plug
     - phpstorm
     - sequel-pro
-    - skype
     - slack
     - sonos
     - spotify
@@ -74,6 +71,8 @@
       - { name: Day One, id: 1055511498 }
       - { name: Keynote, id: 409183694 }
       - { name: Neptunes, id: 1006739057 }
+      - { name: Numbers, id: 409203825 }
+      - { name: Outbank, id: 1094255754 }
       - { name: Pages, id: 409201541 }
       - { name: Patterns, id: 429449079 }
       - { name: Pixelmator, id: 407963104 }

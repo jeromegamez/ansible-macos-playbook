@@ -1,23 +1,23 @@
 ---
 
-- name: Install tools (homebrew).
-  homebrew:
-    name: "{{ item }}"
-    state: latest
-  with_items:
-    - asciinema
-    - awscli
-    - aws-shell
-    - ctop
-    - dnsmasq
-    - doctl
-    - thefuck
-    - httpie
-    - jq
-    - md5sha1sum
-    - mysql
-    - terraform
-    - terraform-inventory
+# - name: Install tools (homebrew).
+#   homebrew:
+#     name: "{{ item }}"
+#     state: latest
+#   with_items:
+#     - asciinema
+#     - awscli
+#     - aws-shell
+#     - ctop
+#     - dnsmasq
+#     - doctl
+#     - thefuck
+#     - httpie
+#     - jq
+#     - md5sha1sum
+#     - mysql
+#     - terraform
+#     - terraform-inventory
 
 - name: Install a newer version of make.
   homebrew:
@@ -25,47 +25,51 @@
     state: latest
     install_options: with-default-names
 
-- name: Install tools (npm global).
-  npm:
-    name: "{{ item }}"
-    global: yes
-  with_items:
-    - firebase-tools
-    - git-standup
-    - gulp
+# - name: Install tools (npm global).
+#   npm:
+#     name: "{{ item }}"
+#     global: yes
+#   with_items:
+#     - firebase-tools
+#     - git-standup
+#     - gulp
 
-- name: Install python libraries
-  pip:
-    name: "{{ item }}"
-  with_items:
-    - "passlib[bcrypt]"
-    - Sphinx
+# - name: Install python libraries
+#   pip:
+#     name: "{{ item }}"
+#   with_items:
+#     - "passlib[bcrypt]"
+#     - Sphinx
 
-- name: Install NGINX.
-  homebrew:
-    name: nginx
-    state: latest
-    install_options: with-gunzip,with-http2
+# - name: Install NGINX.
+#   homebrew:
+#     name: nginx
+#     state: latest
+#     install_options: with-gunzip,with-http2
 
-- name: Install GitLab CI runner
-  shell: curl --output /usr/local/bin/gitlab-runner https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-ci-multi-runner-darwin-amd64
-  args:
-    creates: /usr/local/bin/gitlab-runner
+# - name: Install GitLab CI runner
+#   shell: curl --output /usr/local/bin/gitlab-runner https://gitlab-ci-multi-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-ci-multi-runner-darwin-amd64
+#   args:
+#     creates: /usr/local/bin/gitlab-runner
 
-- name: Make GitLab CI runner executable
-  file:
-    path: /usr/local/bin/gitlab-runner
-    mode: a+x
+# - name: Make GitLab CI runner executable
+#   file:
+#     path: /usr/local/bin/gitlab-runner
+#     mode: a+x
 
-- include: php.yml
+- import_tasks: php.yml
   tags: [php]
+  when: install_php
 
-- include: vagrant.yml
+- import_tasks: vagrant.yml
   tags: [vagrant]
+  when: install_vagrant
 
-- include: docker.yml
+- import_tasks: docker.yml
   tags: [docker]
+  when: install_docker
 
-- include: kubernetes.yml
+- import_tasks: kubernetes.yml
   tags: [kubernetes]
+  when: install_kubernetes
 

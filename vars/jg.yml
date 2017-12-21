@@ -1,0 +1,17 @@
+---
+
+## essentials
+install_vim: yes
+install_watch: yes
+install_wget: yes
+
+## hostname settings
+computername: Kerngehäuse
+hostname: kerngehaeuse
+localhostname: kerngehaeuse
+
+## dev apps
+install_php: yes
+
+## yadm
+yadm_repo_url: 'https://gitlab.com/jeromegamez/dotfiles.git'
