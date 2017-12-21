@@ -28,5 +28,8 @@
 #   - "{{ homebrew_php_basename }}-intl"
 #   - "{{ homebrew_php_basename }}-opcache"
 #   - "{{ homebrew_php_basename }}-xdebug"
+# composer_global_packages:
+#   - pyrech/composer-changelogs
+#   - hirak/prestissimo
 
 # install_vagrant: no

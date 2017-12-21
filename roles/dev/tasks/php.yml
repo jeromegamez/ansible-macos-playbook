@@ -29,7 +29,5 @@
 
 - name: Install global composer packages.
   shell: composer global require {{ item }}
-  with_items:
-    - pyrech/composer-changelogs
-    - hirak/prestissimo
+  with_items: "{{ composer_global_packages }}"
   when: item not in composer_global_info.stdout
