@@ -42,3 +42,11 @@
 
     - name: apps
       tags: [apps]
+
+  tasks:
+    - name: Upgrade all homebrew packages
+      homebrew:
+        update_homebrew: yes
+        upgrade_all: yes
+      tags: [always]
+      when: upgrade_all_homebrew_packages

@@ -1,5 +1,7 @@
 ---
 
+upgrade_all_homebrew_packages: yes
+
 ## essentials
 enable_essentials: yes
 

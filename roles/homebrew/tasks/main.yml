@@ -11,7 +11,7 @@
   homebrew:
     name: "{{ item.key }}"
     state: "{{ item.value.state | default('present') }}"
-    install_options: "{{ item.value.options | default('') }}"
+    install_options: "{{ item.value.options | default(homebrew_default_state) }}"
     update_homebrew: yes
   with_dict: "{{ homebrew_packages }}"
   when: homebrew_packages|length > 0
