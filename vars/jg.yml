@@ -1,9 +1,6 @@
 ---
 
 ## essentials
-install_curl: yes
-install_gnu_sed: yes
-install_git: yes
 install_vim: yes
 install_watch: yes
 install_wget: yes
@@ -14,7 +11,4 @@ hostname: kerngehaeuse
 localhostname: kerngehaeuse
 
 ## dev apps
-install_docker: no
-install_kubernetes: no
 install_php: yes
-install_vagrant: no
