@@ -33,3 +33,6 @@
 #   - hirak/prestissimo
 
 # install_vagrant: no
+
+## yadm
+# yadm_repo_url: null
