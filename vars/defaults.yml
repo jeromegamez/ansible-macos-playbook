@@ -20,4 +20,5 @@
 # install_docker: no
 # install_kubernetes: no
 # install_php: no
+# homebrew_php_basename: php72
 # install_vagrant: no
