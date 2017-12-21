@@ -1,6 +1,14 @@
 ---
 
-# essentials
+## essentials
+install_curl: yes
+install_gnu_sed: yes
+install_git: yes
+install_vim: yes
+install_watch: yes
+install_wget: yes
+
+## hostname settings
 computername: Kerngehäuse
 hostname: kerngehaeuse
 localhostname: kerngehaeuse

@@ -1,6 +1,14 @@
 ---
 
-# essentials
+## essentials
+# install_curl: no
+# install_gnu_sed: no
+# install_git: no
+# install_vim: no
+# install_watch: no
+# install_wget: no
+
+## hostname settings
 # computername: "My computer"
 # hostname: "my-computer"
 # localhostname: "my-computer"

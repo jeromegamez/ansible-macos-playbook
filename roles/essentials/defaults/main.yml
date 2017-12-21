@@ -1,0 +1,8 @@
+---
+
+install_curl: no
+install_gnu_sed: no
+install_git: no
+install_vim: no
+install_watch: no
+install_wget: no
