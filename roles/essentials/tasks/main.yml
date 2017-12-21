@@ -1,53 +1,8 @@
 ---
 
-- name: Update Homebrew
-  homebrew:
-    update_homebrew: yes
-
-- name: Install curl.
-  homebrew:
-    name: curl
-    state: latest
-    install_options: with-libidn,with-nghttp2
-  when: install_curl
-
-# Not using "state: linked" because this would be executed every run
-- name: Link brewed curl.
-  shell: brew link --force curl
-  args:
-    creates: /usr/local/bin/curl
-  when: install_curl
-
-- name: Install gnu-sed
-  homebrew:
-    name: gnu-sed
-    state: latest
-    install_options: with-default-names
-  when: install_gnu_sed
-
-- name: Install git.
-  homebrew:
-    name: git
-    state: latest
-    install_options: with-brewed-curl,with-brewed-ssl
-  when: install_git
-
-- name: Install vim.
-  homebrew:
-    name: vim
-    state: latest
-    install_options: with-override-system-vi
-  when: install_vim
-
-- name: Install watch.
-  homebrew:
-    name: watch
-    state: latest
-  when: install_watch|bool == true
-
-- name: Install wget.
-  homebrew:
-    name: wget
-    state: latest
-    install_options: with-pcre
-  when: install_wget
+- name: Brew essential packages
+  include_role:
+    name: homebrew
+  vars:
+    homebrew_taps: "{{ essentials_homebrew_taps }}"
+    homebrew_packages: "{{ essentials_homebrew_packages }}"

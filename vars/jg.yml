@@ -1,9 +1,7 @@
 ---
 
 ## essentials
-install_vim: yes
-install_watch: yes
-install_wget: yes
+enable_essentials: yes
 
 ## hostname settings
 computername: Kerngehäuse

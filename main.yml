@@ -2,17 +2,22 @@
 
 - name: Everything's gonna be alright.
   hosts: localhost
+  vars_files:
+    - vars/defaults.yml
 
   pre_tasks:
-    - include_vars: "{{ item }}"
+    - name: Include user configuration
+      include_vars: "{{ item }}"
       with_first_found:
-        - "{{ ansible_env.USER }}.yml"
-        - "defaults.yml"
+        - files:
+          - "{{ ansible_env.USER }}.yml"
+          skip: true
       tags: [always]
 
   roles:
     - name: essentials
       tags: [essentials]
+      when: enable_essentials
 
     - name: shell
       tags: [shell]
