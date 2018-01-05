@@ -10,6 +10,7 @@
   register: active_screensaver_result
   check_mode: no
   changed_when: false
+  failed_when: false # fails when no screen saver has been set
 
 - name: Activate custom screensaver, if needed.
   shell: defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName -string "Fliqlo" path -string "/Users/jg/Library/Screen Savers/Fliqlo.saver" type -int 0
