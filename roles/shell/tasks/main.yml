@@ -7,6 +7,7 @@
   with_items:
     - node
     - zsh
+    - zsh-syntax-highlighting
 
 - name: Hush login.
   file:
@@ -23,11 +24,6 @@
   npm:
     name: pure-prompt
     global: yes
-
-- name: Install zsh-syntax-highlighting.
-  git:
-    repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
-    dest: ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 - name: Register homebrewed ZSH as globally available shell.
   become: yes
