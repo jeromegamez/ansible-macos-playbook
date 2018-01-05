@@ -37,6 +37,7 @@
     - font-roboto
     - font-roboto-condensed
     - font-roboto-mono
+    - franz
     - gitup
     - google-chrome
     - gpg-suite
@@ -48,16 +49,12 @@
     - plug
     - phpstorm
     - sequel-pro
-    - slack
     - sonos
     - spotify
     - sublime-text
-    - telegram-desktop
-    - textual
     - transmit
     - tower
     - vlc
-    - whatsapp
 
 - include_role:
     name: mas
@@ -91,8 +88,8 @@
         path: /Applications/MailMate.app
       - name: Fantastical 2
         path: /Applications/Fantastical 2.app
-      - name: Slack
-        path: /Applications/Slack.app
+      - name: Franz
+        path: /Applications/Franz.app
       - name: Nachrichten
         path: /Applications/Messages.app
       - name: Safari
