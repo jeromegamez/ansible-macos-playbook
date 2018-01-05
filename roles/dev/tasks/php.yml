@@ -21,13 +21,10 @@
     name: composer
     state: latest
 
-- name: Get globally installed packages
-  shell: composer global info
-  register: composer_global_info
-  changed_when: false
-  check_mode: no
-
 - name: Install global composer packages.
-  shell: composer global require {{ item }}
+  composer:
+    command: require
+    global_command: yes
+    arguments: "{{ item }}"
   with_items: "{{ composer_global_packages }}"
-  when: item not in composer_global_info.stdout
+  when: not ansible_check_mode
