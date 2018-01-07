@@ -1,18 +1,14 @@
 ---
 
-- name: Tap dinghy in homebrew
-  homebrew_tap:
-    name: codekitchen/dinghy
+- name: "Determine hombrew's cask name for docker"
+  set_fact:
+    docker_cask_name: "{{ 'docker' if docker_version == 'stable' else ('docker-' + docker_version) }}"
 
-- name: "Install docker related tools."
-  homebrew:
-    name: "{{ item }}"
-    state: latest
-  with_items:
-    - docker
-    - docker-completion
-    - docker-compose
-    - docker-credential-helper
-    - docker-machine
-    - docker-machine-driver-xhyve
-    - dinghy
+- name: Tap caskroom/versions
+  homebrew_tap:
+    tap: caskroom/versions
+  when: docker_cask_name != "docker"
+
+- name: "Install {{ docker_cask_name }}"
+  homebrew_cask:
+    name: "{{ docker_cask_name }}"

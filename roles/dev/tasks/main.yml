@@ -68,8 +68,3 @@
 - import_tasks: docker.yml
   tags: [docker]
   when: install_docker
-
-- import_tasks: kubernetes.yml
-  tags: [kubernetes]
-  when: install_kubernetes
-

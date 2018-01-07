@@ -1,9 +1,10 @@
 ---
 
 install_docker: no
-install_kubernetes: no
 install_php: no
 install_vagrant: no
+
+docker_version: stable
 
 homebrew_php_basename: php72
 homebrew_php_extensions:

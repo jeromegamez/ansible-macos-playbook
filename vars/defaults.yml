@@ -15,7 +15,7 @@ enable_essentials: no
 ## dev apps
 
 # install_docker: no
-# install_kubernetes: no
+# docker_version: stable
 
 # install_php: no
 # homebrew_php_basename: php72

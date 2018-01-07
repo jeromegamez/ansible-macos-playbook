@@ -1,7 +1,5 @@
 ---
 
-upgrade_all_homebrew_packages: yes
-
 ## essentials
 enable_essentials: yes
 
@@ -12,6 +10,8 @@ localhostname: kerngehaeuse
 
 ## dev apps
 install_php: yes
+install_docker: yes
+docker_version: edge
 
 ## yadm
 yadm_repo_url: 'https://gitlab.com/jeromegamez/dotfiles.git'
