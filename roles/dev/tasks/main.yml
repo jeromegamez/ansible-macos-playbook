@@ -34,12 +34,13 @@
 #     - git-standup
 #     - gulp
 
-# - name: Install python libraries
-#   pip:
-#     name: "{{ item }}"
-#   with_items:
-#     - "passlib[bcrypt]"
-#     - Sphinx
+- name: Install python libraries
+  pip:
+    name: "{{ item }}"
+  with_items:
+    - "passlib[bcrypt]"
+    - Sphinx
+    - sphinx_rtd_theme
 
 # - name: Install NGINX.
 #   homebrew:
