@@ -1,23 +1,28 @@
 ---
 
-# - name: Install tools (homebrew).
-#   homebrew:
-#     name: "{{ item }}"
-#     state: latest
-#   with_items:
-#     - asciinema
-#     - awscli
-#     - aws-shell
-#     - ctop
-#     - dnsmasq
-#     - doctl
-#     - thefuck
-#     - httpie
-#     - jq
-#     - md5sha1sum
-#     - mysql
-#     - terraform
-#     - terraform-inventory
+- name: Ensure taps
+  homebrew_tap:
+    name: jeromegamez/formulae
+
+- name: Install tools (homebrew).
+  homebrew:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    # - asciinema
+    # - awscli
+    # - aws-shell
+    - chag
+    # - ctop
+    # - dnsmasq
+    # - doctl
+    # - thefuck
+    # - httpie
+    - jq
+    - md5sha1sum
+    # - mysql
+    # - terraform
+    # - terraform-inventory
 
 - name: Install a newer version of make.
   homebrew:
