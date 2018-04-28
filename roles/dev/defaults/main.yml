@@ -6,13 +6,12 @@ install_vagrant: no
 
 docker_version: stable
 
-homebrew_php_basename: php72
-homebrew_php_extensions:
-  - "{{ homebrew_php_basename }}-apcu"
-  - "{{ homebrew_php_basename }}-gmp"
-  - "{{ homebrew_php_basename }}-intl"
-  - "{{ homebrew_php_basename }}-opcache"
-  - "{{ homebrew_php_basename }}-xdebug"
+php_extensions:
+  - pecl/apcu
+  - pecl/igbinary
+  - pecl/imagick
+  - pecl/redis
+  - pecl/xdebug
 
 composer_global_packages:
   - pyrech/composer-changelogs

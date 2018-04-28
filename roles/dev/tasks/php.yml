@@ -1,20 +1,13 @@
 ---
 
-- name: Tap PHP in Homebrew.
-  homebrew_tap:
-    name: homebrew/php
-
-- name: Install PHP (this might take a while).
+- name: Install PHP.
   homebrew:
-    name: "{{ homebrew_php_basename }}"
-    state: latest
-    install_options: with-homebrew-curl,with-homebrew-libxml2,with-homebrew-libxslt,with-phpdbg
+    name: php
 
 - name: Install PHP extensions.
-  homebrew:
+  pear:
     name: "{{ item }}"
-    state: latest
-  with_items: "{{ homebrew_php_extensions }}"
+  with_items: "{{ php_extensions }}"
 
 - name: Install composer.
   homebrew:
