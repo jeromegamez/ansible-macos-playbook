@@ -28,6 +28,7 @@
   with_items:
     - alfred
     - bartender
+    - cardhop
     - cleanmymac
     - encryptme
     - dash
