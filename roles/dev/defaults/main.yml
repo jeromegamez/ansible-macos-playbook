@@ -6,10 +6,15 @@ install_vagrant: no
 
 docker_version: stable
 
+php_extension_dependencies:
+  - memcached
+  - libmemcached
+
 php_extensions:
   - pecl/apcu
   - pecl/igbinary
   - pecl/imagick
+  - pecl/memcached
   - pecl/redis
   - pecl/xdebug
 

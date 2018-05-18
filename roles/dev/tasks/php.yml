@@ -3,6 +3,12 @@
 - name: Install PHP.
   homebrew:
     name: php
+  ignore_errors: yes
+
+- name: Install PHP extension dependencies
+  homebrew:
+    name: "{{ item }}"
+  with_items: "{{ php_extension_dependencies }}"
 
 - name: Install PHP extensions.
   pear:

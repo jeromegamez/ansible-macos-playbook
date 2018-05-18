@@ -23,6 +23,7 @@
     # - mysql
     # - terraform
     # - terraform-inventory
+    - unzip
 
 - name: Install a newer version of make.
   homebrew:
