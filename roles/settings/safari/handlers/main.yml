@@ -1,5 +1,4 @@
 ---
 
-- name: Kill Safari
-  shell: killall Safari
-  failed_when: false
+- name: Restart Safari
+  shell: osascript -e 'quit app "Safari"' && osascript -e 'tell application "Safari" to activate'
