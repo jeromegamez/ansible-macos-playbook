@@ -21,14 +21,6 @@ provider when setting up a computer from scratch.
 
 ## Installation
 
-### Automated
-
-```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/jeromegamez/ansible-macos-playbook/master/install.sh)"
-```
-
-### Manual
-
 ```bash
 # Install Apple's Command Line Tools
 xcode-select --install
@@ -36,8 +28,9 @@ xcode-select --install
 # Install Homebrew (see http://brew.sh)
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Install ansible
-brew install ansible
+# Install python
+brew install python
+pip3 install ansible
 
 # Clone this repository
 https://github.com/jeromegamez/ansible-macos-playbook.git
