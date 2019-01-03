@@ -1,0 +1,16 @@
+---
+
+- name: Ensure yadm is installed.
+  homebrew:
+    name: yadm
+    state: latest
+
+- name: Fetch dotfiles.
+  shell: yadm clone {{ yadm_repo_url }}
+  args:
+    creates: "~/.yadm/repo.git"
+  register: yadm_clone_result
+
+- name: Overwrite local changes, if needed.
+  shell: yadm reset --hard
+  when: yadm_clone_result.changed

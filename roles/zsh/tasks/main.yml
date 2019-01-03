@@ -1,0 +1,23 @@
+---
+
+- name: Install ZSH.
+  homebrew:
+    name: zsh
+
+- name: Hush login.
+  file:
+    path: ~/.hushlogin
+    state: touch
+  changed_when: false
+
+- name: Register homebrewed ZSH as globally available shell.
+  become: yes
+  lineinfile:
+    dest: '/etc/shells'
+    line: '/usr/local/bin/zsh'
+
+- name: Set ZSH as shell for {{ ansible_user_id }}.
+  become: yes
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: '/usr/local/bin/zsh'

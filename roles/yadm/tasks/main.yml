@@ -1,18 +1,4 @@
 ---
 
-- name: Ensure yadm is installed.
-  homebrew:
-    name: yadm
-    state: latest
+- import_tasks: yadm.yml
   when: yadm_repo_url != None
-
-- name: Fetch dotfiles.
-  shell: yadm clone {{ yadm_repo_url }}
-  args:
-    creates: "~/.yadm/repo.git"
-  register: yadm_clone_result
-  when: yadm_repo_url != None
-
-- name: Overwrite local changes, if needed.
-  shell: yadm reset --hard
-  when: yadm_repo_url != None and yadm_clone_result.changed

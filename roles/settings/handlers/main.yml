@@ -1,0 +1,10 @@
+---
+
+- name: Restart Finder
+  shell: killall Finder
+
+- name: Restart Dock
+  shell: killall Dock
+
+- name: Restart Safari
+  shell: osascript -e 'quit app "Safari"' && osascript -e 'tell application "Safari" to activate'

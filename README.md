@@ -33,17 +33,19 @@ brew install python
 pip3 install ansible
 
 # Clone this repository
-https://github.com/jeromegamez/ansible-macos-playbook.git
+git clone https://github.com/jeromegamez/ansible-macos-playbook.git
+cd ansible-macos-playbook
+ansible-galaxy install -r requirements.yml
 
-# Run the playbook
+# Run the playbooks
 ansible-playbook main.yml
 ```
 
-### Variables
+### Overriding defaults
 
-If you want to use this playbook for your own computer, fork the repository and
-execute `cp vars/defaults.yml vars/${USER}.yml` - you can change any variable
-in that file however you like.
+Not everyone's development environment and preferred software configuration is the same.
+
+You can override any of the defaults configured in default.config.yml by creating a config.yml file and setting the overrides in that file.
 
 ## Acknowledgements
 

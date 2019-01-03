@@ -1,0 +1,17 @@
+---
+
+- import_tasks: hostname.yml
+  tags: [settings-hostname]
+
+- import_tasks: safari.yml
+  tags: [settings-safari]
+
+- import_tasks: system.yml
+  tags: [settings-system]
+
+- import_tasks: dock.yml
+  tags: [settings-dock]
+
+- import_tasks: trackpad_tap_to_click.yml
+  when: trackpad_tap_to_click != None
+  tags: [trackpad]

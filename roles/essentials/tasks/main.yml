@@ -1,8 +1,0 @@
----
-
-- name: Brew essential packages
-  include_role:
-    name: homebrew
-  vars:
-    homebrew_taps: "{{ essentials_homebrew_taps }}"
-    homebrew_packages: "{{ essentials_homebrew_packages }}"

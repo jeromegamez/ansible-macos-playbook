@@ -1,0 +1,38 @@
+---
+
+- name: Get current ComputerName
+  shell: scutil --get ComputerName
+  register: computername_result
+  changed_when: false
+  check_mode: no
+  when: computername != None
+
+- name: Update ComputerName
+  shell: scutil --set ComputerName {{ computername }}
+  become: true
+  when: computername != None and (computername not in computername_result.stdout)
+
+- name: Get current HostName
+  shell: scutil --get HostName
+  register: hostname_result
+  changed_when: false
+  failed_when: false
+  check_mode: no
+  when: hostname != None
+
+- name: Update HostName
+  shell: scutil --set HostName {{ hostname }}
+  become: true
+  when: hostname != None and (hostname_result.failed or (hostname not in hostname_result.stdout))
+
+- name: Get current LocalHostName
+  shell: scutil --get LocalHostName
+  register: localhostname_result
+  changed_when: false
+  check_mode: no
+  when: hostname != None
+
+- name: Update LocalHostName
+  shell: scutil --set LocalHostName {{ hostname }}
+  become: true
+  when: hostname != None and (hostname not in localhostname_result.stdout)

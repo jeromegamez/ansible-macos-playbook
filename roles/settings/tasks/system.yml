@@ -1,0 +1,78 @@
+---
+
+- name: Save application states on quit ({{ system_save_application_state_on_quit }})
+  when: system_save_application_state_on_quit != None
+  osx_defaults:
+    domain: com.apple.systempreferences
+    key: NSQuitAlwaysKeepsWindows
+    type: bool
+    value: "{{ system_save_application_state_on_quit|bool }}"
+
+- name: Expand save panel by default ({{ system_expand_save_panel_by_default }})
+  when: system_expand_save_panel_by_default != None
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: NSNavPanelExpandedStateForSaveMode
+    type: bool
+    value: "{{ system_expand_save_panel_by_default|bool }}"
+  notify: Restart Finder
+
+- name: Expand print panel by default ({{ system_expand_print_panel_by_default }})
+  when: system_expand_print_panel_by_default != None
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: PMPrintingExpandedStateForPrint
+    type: bool
+    value: "{{ system_expand_print_panel_by_default|bool }}"
+  notify: Restart Finder
+
+- name: Show extension warning ({{ system_show_file_extensions_warning }})
+  when: system_show_file_extensions_warning != None
+  osx_defaults:
+    domain: com.apple.finder
+    key: FXEnableExtensionChangeWarning
+    type: bool
+    value: "{{ system_show_file_extensions_warning|bool }}"
+  notify: Restart Finder
+
+- name: Warn before emptying the trash ({{ system_warn_before_emptying_the_trash }})
+  when: system_warn_before_emptying_the_trash != None
+  osx_defaults:
+    domain: com.apple.finder
+    key: WarnOnEmptyTrash
+    type: bool
+    value: "{{ system_warn_before_emptying_the_trash|bool }}"
+  notify: Restart Finder
+
+- name: Use F keys as standard function keys ({{ system_use_f_keys_as_standard_function_keys }})
+  when: system_use_f_keys_as_standard_function_keys != None
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: com.apple.keyboard.fnState
+    type: int
+    value: "{{ system_use_f_keys_as_standard_function_keys|int }}"
+
+- name: Index network storage with Spotlight ({{ system_index_network_storage_with_spotlight }})
+  become: true
+  when: system_index_network_storage_with_spotlight != None
+  osx_defaults:
+    domain: /Library/Preferences/com.apple.SpotlightServer.plist
+    key: ExternalVolumesIgnore
+    type: bool
+    value: "{{ system_index_network_storage_with_spotlight|bool }}"
+
+- name: Ask for a password when leaving the screensaver ({{ screensaver_ask_for_password }}).
+  when: screensaver_ask_for_password != None
+  osx_defaults:
+    domain: com.apple.screensaver
+    key: askForPassword
+    type: int
+    value: "{{ screensaver_ask_for_password|int }}"
+
+- name: "Ask for password delay ({{ screensaver_ask_for_password_in_seconds }})"
+  when: screensaver_ask_for_password_in_seconds != None
+  osx_defaults:
+    domain: com.apple.screensaver
+    key: askForPasswordDelay
+    type: float
+    value: "{{ screensaver_ask_for_password_in_seconds|int }}"

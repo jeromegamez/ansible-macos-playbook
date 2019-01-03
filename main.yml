@@ -1,44 +1,29 @@
 ---
 
-- name: Everything's gonna be alright.
-  hosts: localhost
+- hosts: all
+  connection: local
   vars_files:
-    - vars/defaults.yml
+    - default.config.yml
 
   pre_tasks:
     - name: Include user configuration
       include_vars: "{{ item }}"
-      with_first_found:
-        - files:
-          - "{{ ansible_env.USER }}.yml"
-          skip: true
-      tags: [always]
+      with_fileglob:
+        - "{{ playbook_dir }}/config.yml"
+      tags: ['always']
 
   roles:
-    - name: essentials
-      tags: [essentials]
-      when: enable_essentials
-
-    - name: shell
-      tags: [shell]
-
-    - name: yadm
+    - role: geerlingguy.homebrew
+      tags: [homebrew]
+    - role: geerlingguy.mas
+      tags: [mas]
+    - role: yadm
       tags: [yadm]
-
-    - name: dev
-      tags: [dev]
-
-    - name: macos-settings
+    - role: settings
       tags: [settings]
-
-    - name: settings/hostname
-      tags: [hostname]
-
-    - name: settings/safari
-      tags: [settings-safari]
-
-    - name: settings/system
-      tags: [settings-system]
-
-    - name: apps
-      tags: [apps]
+    - role: zsh
+      tags: [zsh]
+      when: change_shell_to_zsh|bool == True
+    - role: fliqlo
+      tags: [screensaver, fliqlo]
+      when: screensaver_use_fliqlo|bool == True
