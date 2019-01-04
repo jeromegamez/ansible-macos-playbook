@@ -18,8 +18,6 @@ screensaver_ask_for_password_in_seconds: 5
 
 change_shell_to_zsh: yes
 
-yadm_repo_url: https://gitlab.com/jeromegamez/dotfiles.git
-
 homebrew_taps:
   - homebrew/core
   - homebrew/cask

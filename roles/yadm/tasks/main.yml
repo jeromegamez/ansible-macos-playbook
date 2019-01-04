@@ -1,4 +1,0 @@
----
-
-- import_tasks: yadm.yml
-  when: yadm_repo_url != None

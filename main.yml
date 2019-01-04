@@ -17,8 +17,6 @@
       tags: [homebrew]
     - role: geerlingguy.mas
       tags: [mas]
-    - role: yadm
-      tags: [yadm]
     - role: settings
       tags: [settings]
     - role: zsh
