@@ -12,7 +12,6 @@ system_use_f_keys_as_standard_function_keys: yes
 system_index_network_storage_with_spotlight: no
 trackpad_tap_to_click: yes
 
-screensaver_use_fliqlo: yes
 screensaver_ask_for_password: no
 screensaver_ask_for_password_in_seconds: 5
 

@@ -22,6 +22,3 @@
     - role: zsh
       tags: [zsh]
       when: change_shell_to_zsh|bool == True
-    - role: fliqlo
-      tags: [screensaver, fliqlo]
-      when: screensaver_use_fliqlo|bool == True
