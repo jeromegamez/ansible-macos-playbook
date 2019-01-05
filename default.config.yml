@@ -31,6 +31,7 @@ homebrew_cask_apps:
   - fantastical
   - fliqlo
   - font-fira-code
+  - font-roboto
   - franz
   - gitup
   - gpg-suite
@@ -49,13 +50,27 @@ homebrew_cask_apps:
   - tower
 
 homebrew_installed_packages:
+  - aws-shell
+  - awscli
+  - bash
+  - composer
   - curl
   - git
+  - hub
+  - httpie
+  - jq
+  - libmemcached
   - macvim
   - {name: make, install_options: "with-default-names" }
+  - memcached
+  - php@7.2
+  - pkg-config
   - python
+  - ruby
   - wget
   - yadm
+  - zlib
+  - zsh
 
 mas_installed_apps:
   - { name: 1Blocker, id: 1107421413 }
