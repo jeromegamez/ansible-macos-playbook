@@ -7,6 +7,7 @@ This is the playbook I use after a clean install of MacOS to set everything up.
 - Installs Homebrew packages and app casks (Role `homebrew`)
 - Installs App Store apps with [`mas-cli`](https://github.com/mas-cli/mas) (Role `mas`)
 - Modifies MacOS settings (Role `settings`)
+- Changes the user shell, if configured (Role `shell`)
 
 ## Installation
 

@@ -15,7 +15,7 @@ trackpad_tap_to_click: yes
 screensaver_ask_for_password: no
 screensaver_ask_for_password_in_seconds: 5
 
-change_shell_to_zsh: yes
+shell_path: /usr/local/bin/zsh
 
 homebrew_taps:
   - homebrew/core

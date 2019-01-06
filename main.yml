@@ -19,6 +19,5 @@
       tags: [mas]
     - role: settings
       tags: [settings]
-    - role: zsh
-      tags: [zsh]
-      when: (change_shell_to_zsh|default(False)|bool == True)
+    - role: shell
+      tags: [shell]

@@ -1,0 +1,16 @@
+---
+
+- name: Ensure shell is registered in /etc/shells
+  when: shell_path != None
+  become: yes
+  lineinfile:
+    dest: "/etc/shells"
+    line: "{{ shell_path }}"
+
+
+- name: Change shell for current user
+  when: shell_path != None
+  become: yes
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: "{{ shell_path }}"
