@@ -3,10 +3,10 @@
 computername: null
 hostname: null
 
-safari_show_full_url_in_address_bar: yes
-safari_open_safe_files_automatically: no
-safari_show_status_bar: yes
-safari_show_developer_menu: yes
+safari_show_full_url_in_address_bar: null
+safari_open_safe_files_automatically: null
+safari_show_status_bar: null
+safari_show_developer_menu: null
 
 system_save_application_state_on_quit: null
 system_expand_save_panel_by_default: null
@@ -20,5 +20,5 @@ trackpad_tap_to_click: null
 screensaver_ask_for_password: null
 screensaver_ask_for_password_in_seconds: null
 
-dock_make_hidden_apps_translucent: yes
-dock_show_indicator_lights_for_open_apps: yes
+dock_make_hidden_apps_translucent: null
+dock_show_indicator_lights_for_open_apps: null

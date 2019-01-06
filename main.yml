@@ -6,8 +6,10 @@
     - name: Include configuration
       include_vars: "{{ item }}"
       with_first_found:
-        - config.yml
-        - default.config.yml
+        - files:
+            - config.yml
+            - default.config.yml
+          skip: true
       tags: ['always']
 
   roles:
@@ -19,4 +21,4 @@
       tags: [settings]
     - role: zsh
       tags: [zsh]
-      when: change_shell_to_zsh|bool == True
+      when: (change_shell_to_zsh|default(False)|bool == True)

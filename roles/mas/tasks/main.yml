@@ -4,6 +4,7 @@
   homebrew:
     name: mas
     state: present
+  when: mas_apps|count > 0
 
 - name: Get installed MAS apps
   command: mas list

@@ -1,6 +1,7 @@
 ---
 
 - name: "Show full URL in the address bar ({{ show_full_url_in_address_bar }})"
+  when: safari_show_full_url_in_address_bar != None
   osx_defaults:
     domain: "{{ safari_defaults_domain }}"
     key: ShowFullURLInSmartSearchField
@@ -9,6 +10,7 @@
   notify: Restart Safari
 
 - name: "Open 'safe' files automatically ({{ open_safe_files_automatically }})"
+  when: safari_open_safe_files_automatically != None
   osx_defaults:
     domain: "{{ safari_defaults_domain }}"
     key: AutoOpenSafeDownloads
@@ -17,6 +19,7 @@
   notify: Restart Safari
 
 - name: "Show status bar ({{ show_status_bar }})"
+  when: safari_show_status_bar != None
   osx_defaults:
     domain: "{{ safari_defaults_domain }}"
     key: ShowOverlayStatusBar
@@ -25,6 +28,7 @@
   notify: Restart Safari
 
 - name: "Show status bar ({{ show_developer_menu }})"
+  when: safari_show_developer_menu != None
   osx_defaults:
     domain: "{{ safari_defaults_domain }}"
     key: IncludeDevelopMenu
