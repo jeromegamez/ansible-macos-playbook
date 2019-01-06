@@ -1,6 +1,4 @@
 /.ansible
 /config.yml
 
-/roles/geerlingguy.homebrew
 /roles/geerlingguy.mas
-/roles/elliotweiser.osx-command-line-tools

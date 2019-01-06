@@ -12,7 +12,7 @@
       tags: ['always']
 
   roles:
-    - role: geerlingguy.homebrew
+    - role: homebrew
       tags: [homebrew]
     - role: geerlingguy.mas
       tags: [mas]

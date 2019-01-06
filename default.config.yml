@@ -23,7 +23,7 @@ homebrew_taps:
   - homebrew/cask-fonts
   - homebrew/cask-versions
 
-homebrew_cask_apps:
+homebrew_apps:
   - 1password
   - alfred
   - cleanmymac
@@ -50,7 +50,7 @@ homebrew_cask_apps:
   - textual
   - tower
 
-homebrew_installed_packages:
+homebrew_packages:
   - aws-shell
   - awscli
   - bash
