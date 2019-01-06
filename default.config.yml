@@ -47,6 +47,7 @@ homebrew_cask_apps:
   - slack
   - spotify
   - sublime-text
+  - textual
   - tower
 
 homebrew_installed_packages:
@@ -63,6 +64,7 @@ homebrew_installed_packages:
   - macvim
   - {name: make, install_options: "with-default-names" }
   - memcached
+  - mysql@5.7
   - php@7.2
   - pkg-config
   - python
