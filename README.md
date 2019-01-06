@@ -28,15 +28,12 @@ pip3 install ansible
 # Clone this repository
 git clone https://github.com/jeromegamez/ansible-macos-playbook.git
 cd ansible-macos-playbook
-ansible-galaxy install -r requirements.yml
 
 # Run the playbooks
 ansible-playbook main.yml
 ```
 
 ### Overriding defaults
-
-Not everyone's development environment and preferred software configuration is the same.
 
 You can override any of the defaults configured in default.config.yml by creating a config.yml file and setting the overrides in that file.
 

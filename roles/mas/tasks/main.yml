@@ -1,0 +1,17 @@
+---
+
+- name: Ensure mas-cli is installed
+  homebrew:
+    name: mas
+    state: present
+
+- name: Get installed MAS apps
+  command: mas list
+  register: mas_list
+  check_mode: no
+  changed_when: false
+
+- name: Ensure MAS apps
+  command: mas install "{{ item.id|default(item) }}"
+  loop: "{{ mas_apps }}"
+  when: (item.id|default(item)|string) not in mas_list.stdout

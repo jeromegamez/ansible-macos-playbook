@@ -1,20 +1,19 @@
 ---
 
 - hosts: localhost
-  vars_files:
-    - default.config.yml
 
   pre_tasks:
-    - name: Include user configuration
+    - name: Include configuration
       include_vars: "{{ item }}"
-      with_fileglob:
-        - "{{ playbook_dir }}/config.yml"
+      with_first_found:
+        - config.yml
+        - default.config.yml
       tags: ['always']
 
   roles:
     - role: homebrew
       tags: [homebrew]
-    - role: geerlingguy.mas
+    - role: mas
       tags: [mas]
     - role: settings
       tags: [settings]
