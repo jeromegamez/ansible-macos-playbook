@@ -2,40 +2,20 @@
 
 This is the playbook I use after a clean install of MacOS to set everything up.
 
-Advantages for me over using a shell script based setup
+## Roles/Tasks
 
-- I can run the playbook over and over again with the same results.
-- Tasks are only executed when changes are needed.
-- The documentation about what is done is right in the output,
-  instead of only in the comments.
-- When a task doesn't work anymore, for example after a new macOS release,
-  I will know immediately which one and why.
-- It helps me to improve my Ansible skills :)
+- Installs Homebrew packages and app casks (Role `homebrew`)
+- Installs App Store apps with [`mas-cli`](https://github.com/mas-cli/mas) (Role `mas`)
+- Modifies MacOS settings (Role `settings`)
 
 ## Installation
 
-```bash
-# Install Apple's Command Line Tools
-xcode-select --install
-
-# Install Homebrew (see http://brew.sh)
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# Install python
-brew install python
-pip3 install ansible
-
-# Clone this repository
-git clone https://github.com/jeromegamez/ansible-macos-playbook.git
-cd ansible-macos-playbook
-
-# Run the playbooks
-ansible-playbook main.yml
-```
-
-### Overriding defaults
-
-You can override any of the defaults configured in default.config.yml by creating a config.yml file and setting the overrides in that file.
+1. Install [Homebrew](https://brew.sh).
+1. Install [Ansible](http://docs.ansible.com/intro_installation.html).
+1. Copy `default.config.yml` to `config.yml` and edit the configuration to your likings.
+   - Without a `config.yml`, the playbook will skip all tasks.
+1. Run `ansible-playbook main.yml`. Enter your account password when prompted.
+   - If you have a configuration stored elsewhere (e.g. in a dotfiles folders), run `ansible-playbook main.yml --extra-vars=@/path/to/my/config.yml`
 
 ## Acknowledgements
 

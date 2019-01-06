@@ -1,5 +1,37 @@
 ---
 
+# Homebrew Formula repositories to tap
+#
+# Example:
+#
+# homebrew_taps:
+#   - homebrew/core
+#   - homebrew/cask
+#   - homebrew/cask-fonts
+#   - homebrew/cask-versions
 homebrew_taps: []
+
+# Applications to install via Homebrew casks
+#
+# Example:
+#
+# homebrew_apps:
+#   - 1password
+#   - font-fira-code
+#   - gpg-suite
+#   - iterm2
+#   - spotify
+#   - sublime-text
 homebrew_apps: []
+
+# Packages to install with Homebrew
+#
+# Example:
+#
+# homebrew_packages:
+#   - bash
+#   - curl
+#   - git
+#   - {name: make, install_options: "with-default-names" }
+#   - mysql@5.7
 homebrew_packages: []
