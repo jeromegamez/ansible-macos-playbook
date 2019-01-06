@@ -26,6 +26,7 @@ homebrew_taps:
 homebrew_apps:
   - 1password
   - alfred
+  - bartender
   - cleanmymac
   - dash
   - fantastical
