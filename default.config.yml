@@ -78,6 +78,7 @@ homebrew_packages:
 
 mas_apps:
   - { name: 1Blocker, id: 1107421413 }
+  - { name: Bear, id: 1091189122 }
   - { name: Patterns, id: 429449079 }
   - { name: Pixelmator, id: 407963104 }
   - { name: Reeder, id: 880001334 }
