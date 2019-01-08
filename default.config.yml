@@ -20,6 +20,7 @@ shell_path: /usr/local/bin/zsh
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - homebrew/cask-drivers
   - homebrew/cask-fonts
   - homebrew/cask-versions
 
