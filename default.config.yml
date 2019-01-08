@@ -30,6 +30,7 @@ homebrew_apps:
   - bartender
   - cleanmymac
   - dash
+  - discord
   - fantastical
   - fliqlo
   - font-fira-code
@@ -52,6 +53,7 @@ homebrew_apps:
   - sublime-text
   - textual
   - tower
+  - twitch
 
 homebrew_packages:
   - aws-shell
