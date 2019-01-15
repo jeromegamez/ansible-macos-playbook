@@ -23,6 +23,7 @@ homebrew_taps:
   - homebrew/cask-drivers
   - homebrew/cask-fonts
   - homebrew/cask-versions
+  - jeromegamez/formulae
 
 homebrew_apps:
   - 1password
@@ -59,6 +60,7 @@ homebrew_packages:
   - aws-shell
   - awscli
   - bash
+  - chag
   - composer
   - curl
   - git
@@ -70,6 +72,7 @@ homebrew_packages:
   - {name: make, install_options: "with-default-names" }
   - memcached
   - mysql@5.7
+  - node
   - php@7.2
   - pkg-config
   - python
@@ -82,6 +85,7 @@ homebrew_packages:
 mas_apps:
   - { name: 1Blocker, id: 1107421413 }
   - { name: Bear, id: 1091189122 }
+  - { name: Pages, id: 409201541 }
   - { name: Patterns, id: 429449079 }
   - { name: Pixelmator, id: 407963104 }
   - { name: Reeder, id: 880001334 }
