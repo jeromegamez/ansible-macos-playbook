@@ -43,17 +43,20 @@ homebrew_apps:
   - iterm2
   - kaleidoscope
   - mailmate
+  - osxfuse
   - paw
   - phpstorm
   - plug
   - sequel-pro
   - sonos
+  - spillo
   - rescuetime
   - slack
   - spotify
   - sublime-text
   - textual
   - tower
+  - transmit
   - twitch
 
 homebrew_packages:
