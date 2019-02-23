@@ -24,11 +24,13 @@ homebrew_taps:
   - homebrew/cask-fonts
   - homebrew/cask-versions
   - jeromegamez/formulae
+  - aws/tap
 
 homebrew_apps:
   - 1password
   - alfred
   - bartender
+  - brave-browser
   - cleanmymac
   - dash
   - discord
@@ -55,6 +57,7 @@ homebrew_apps:
   - spotify
   - sublime-text
   - textual
+  - the-unarchiver
   - tower
   - transmit
   - twitch
@@ -62,6 +65,7 @@ homebrew_apps:
 homebrew_packages:
   - aws-shell
   - awscli
+  - aws-sam-cli
   - bash
   - chag
   - composer
@@ -88,6 +92,7 @@ homebrew_packages:
 mas_apps:
   - { name: 1Blocker, id: 1107421413 }
   - { name: Bear, id: 1091189122 }
+  - { name: Carbonize, id: 1451177988 }
   - { name: Pages, id: 409201541 }
   - { name: Patterns, id: 429449079 }
   - { name: Pixelmator, id: 407963104 }
