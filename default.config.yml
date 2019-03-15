@@ -55,6 +55,7 @@ homebrew_apps:
   - rescuetime
   - slack
   - spotify
+  - sublime-merge
   - sublime-text
   - textual
   - the-unarchiver
