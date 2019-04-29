@@ -74,6 +74,7 @@ homebrew_packages:
   - git
   - hub
   - httpie
+  - imagemagick
   - jq
   - libmemcached
   - macvim
@@ -81,12 +82,14 @@ homebrew_packages:
   - memcached
   - mysql@5.7
   - node
-  - php@7.2
+  - php
   - pkg-config
   - python
   - ruby
+  - tree
   - wget
   - yadm
+  - watch
   - zlib
   - zsh
 
