@@ -18,6 +18,17 @@ This is the playbook I use after a clean install of MacOS to set everything up.
 1. Run `ansible-playbook main.yml`. Enter your account password when prompted.
    - If you have a configuration stored elsewhere (e.g. in a dotfiles folders), run `ansible-playbook main.yml --extra-vars=@/path/to/my/config.yml`
 
+## Updating a fork with the latest changes from this repository
+
+If you forked this repository and want to include its latest changes without losing your own,
+add this repository as an upstream and rebase it onto your fork:
+
+```bash
+git remote add upstream git@github.com:jeromegamez/ansible-macos-playbook.git
+git fetch upstream
+git rebase upstream/master
+```
+
 ## Acknowledgements
 
 This playbook is heavily inspired by
