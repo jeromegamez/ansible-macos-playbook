@@ -38,6 +38,7 @@ homebrew_apps:
   - fliqlo
   - font-fira-code
   - font-roboto
+  - fontbase
   - franz
   - gitup
   - gpg-suite
