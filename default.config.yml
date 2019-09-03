@@ -72,6 +72,7 @@ homebrew_packages:
   - chag
   - composer
   - curl
+  - fasd
   - git
   - hub
   - httpie
@@ -82,6 +83,7 @@ homebrew_packages:
   - {name: make, install_options: "with-default-names" }
   - memcached
   - mysql@5.7
+  - neofetch
   - node
   - php
   - pkg-config
