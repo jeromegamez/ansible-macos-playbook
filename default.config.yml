@@ -35,33 +35,27 @@ homebrew_apps:
   - dash
   - discord
   - fantastical
+  - firefox
   - fliqlo
   - font-fira-code
   - font-roboto
   - font-victor-mono
-  - fontbase
-  - franz
   - gitup
   - gpg-suite
-  - iina
   - iterm2
   - kaleidoscope
   - mailmate
-  - osxfuse
   - paw
   - phpstorm
   - plug
   - sequel-pro
   - sonos
   - spillo
-  - rescuetime
   - slack
   - spotify
   - sublime-merge
   - sublime-text
-  - textual
   - the-unarchiver
-  - tower
   - transmit
   - twitch
 
@@ -100,7 +94,6 @@ homebrew_packages:
 mas_apps:
   - { name: 1Blocker, id: 1107421413 }
   - { name: Bear, id: 1091189122 }
-  - { name: Carbonize, id: 1451177988 }
   - { name: Pages, id: 409201541 }
   - { name: Patterns, id: 429449079 }
   - { name: Pixelmator, id: 407963104 }
