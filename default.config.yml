@@ -29,6 +29,7 @@ homebrew_taps:
 homebrew_apps:
   - 1password
   - alfred
+  - aws-vault
   - bartender
   - brave-browser
   - cleanmymac
