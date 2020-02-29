@@ -24,6 +24,7 @@ homebrew_taps:
   - homebrew/cask-fonts
   - homebrew/cask-versions
   - jeromegamez/formulae
+  - github/gh
   - aws/tap
 
 homebrew_apps:
@@ -69,8 +70,8 @@ homebrew_packages:
   - composer
   - curl
   - fasd
+  - gh
   - git
-  - hub
   - httpie
   - imagemagick
   - jq
