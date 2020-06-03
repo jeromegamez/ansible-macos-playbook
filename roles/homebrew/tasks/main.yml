@@ -12,7 +12,7 @@
     name: "{{ item.name|default(item) }}"
     state: "{{ item.state|default('present') }}"
     install_options: "{{ item.install_options | default(omit) }}"
-    accept_external_apps: "{{ item.accept_external_apps | default(omit) }}"
+    accept_external_apps: yes
   loop: "{{ homebrew_apps }}"
   when: homebrew_apps|default([])|count > 0
 
