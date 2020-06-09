@@ -40,16 +40,11 @@ homebrew_apps:
   - firefox
   - fliqlo
   - font-fira-code
-  - font-roboto
-  - font-victor-mono
-  - gitup
   - gpg-suite
   - iterm2
-  - kaleidoscope
+  - jetbrains-toolbox
   - mailmate
   - paw
-  - phpstorm
-  - plug
   - sequel-pro
   - sonos
   - spillo
@@ -57,7 +52,7 @@ homebrew_apps:
   - spotify
   - sublime-merge
   - sublime-text
-  - the-unarchiver
+  - tableplus
   - transmit
   - twitch
 
@@ -75,18 +70,14 @@ homebrew_packages:
   - httpie
   - imagemagick
   - jq
-  - libmemcached
-  - macvim
-  - {name: make, install_options: "with-default-names" }
-  - memcached
-  - mysql@5.7
-  - neofetch
+  - make
   - node
+  - openssh
   - php
   - pkg-config
   - python
-  - ruby
   - tree
+  - vim
   - wget
   - yadm
   - watch
@@ -98,6 +89,4 @@ mas_apps:
   - { name: Bear, id: 1091189122 }
   - { name: Pages, id: 409201541 }
   - { name: Patterns, id: 429449079 }
-  - { name: Pixelmator, id: 407963104 }
-  - { name: Reeder 4, id: 1449412482 }
   - { name: Tweetbot, id: 1384080005 }
