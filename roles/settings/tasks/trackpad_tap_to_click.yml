@@ -17,11 +17,7 @@
       key: com.apple.mouse.tapBehavior
       type: int
       value: "{{ trackpad_tap_to_click|int }}"
-    - domain: com.apple.AppleBluetoothMultitouch.trackpad
-      key: Clicking
-      type: bool
-      value: "{{ trackpad_tap_to_click|bool }}"
     - domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
       key: Clicking
-      type: bool
-      value: "{{ trackpad_tap_to_click|bool }}"
+      type: int
+      value: "{{ trackpad_tap_to_click|int }}"

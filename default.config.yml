@@ -3,6 +3,11 @@
 computername: Kerngehäuse
 hostname: kerngehaeuse
 
+safari_show_full_url_in_address_bar: true
+safari_open_safe_files_automatically: true
+safari_show_status_bar: true
+safari_show_developer_menu: true
+
 system_save_application_state_on_quit: no
 system_expand_save_panel_by_default: yes
 system_expand_print_panel_by_default: yes
