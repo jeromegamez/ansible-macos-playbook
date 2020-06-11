@@ -27,7 +27,6 @@ homebrew_taps:
   - homebrew/cask
   - homebrew/cask-drivers
   - homebrew/cask-fonts
-  - homebrew/cask-versions
   - jeromegamez/formulae
   - github/gh
   - aws/tap
@@ -38,6 +37,7 @@ homebrew_apps:
   - aws-vault
   - bartender
   - brave-browser
+  - cardhop
   - cleanmymac
   - dash
   - discord
@@ -49,6 +49,7 @@ homebrew_apps:
   - iterm2
   - jetbrains-toolbox
   - mailmate
+  - multimc
   - paw
   - sequel-pro
   - sonos
@@ -58,8 +59,10 @@ homebrew_apps:
   - sublime-merge
   - sublime-text
   - tableplus
+  - telegram
   - transmit
   - twitch
+  - whatsapp
 
 homebrew_packages:
   - aws-shell
