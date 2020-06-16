@@ -41,6 +41,7 @@ homebrew_apps:
   - cleanmymac
   - dash
   - discord
+  - docker
   - fantastical
   - firefox
   - fliqlo
