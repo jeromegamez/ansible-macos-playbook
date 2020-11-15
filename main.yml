@@ -19,5 +19,3 @@
       tags: [mas]
     - role: settings
       tags: [settings]
-    - role: shell
-      tags: [shell]
