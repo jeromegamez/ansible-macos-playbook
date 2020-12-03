@@ -1,0 +1,14 @@
+---
+
+# see https://brettterpstra.com/2020/12/02/remove-the-proxy-icon-hover-delay-in-big-sur/
+- name: Configure the proxy icon hover delay in Finder
+  when: (finder_proxy_icon_hover_delay != None) 
+        and (ansible_facts['distribution'] == "MacOSX")
+        and (ansible_facts['distribution_major_version'] == "11")
+  osx_defaults:
+    domain: com.apple.finder
+    key: NSToolbarTitleViewRolloverDelay
+    type: float
+    value: "{{ finder_proxy_icon_hover_delay|float }}"
+  notify: Restart Finder
+

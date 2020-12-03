@@ -3,6 +3,8 @@
 computername: Kerngehäuse
 hostname: kerngehaeuse
 
+finder_proxy_icon_hover_delay: 0
+
 safari_show_full_url_in_address_bar: true
 safari_open_safe_files_automatically: true
 safari_show_status_bar: true

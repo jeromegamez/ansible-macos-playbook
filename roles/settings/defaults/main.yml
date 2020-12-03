@@ -3,6 +3,8 @@
 computername: null
 hostname: null
 
+finder_proxy_icon_hover_delay: null
+
 safari_show_full_url_in_address_bar: null
 safari_open_safe_files_automatically: null
 safari_show_status_bar: null
