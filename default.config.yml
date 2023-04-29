@@ -25,79 +25,99 @@ screensaver_ask_for_password_in_seconds: 5
 shell_path: /usr/local/bin/zsh
 
 homebrew_taps:
-  - homebrew/core
   - homebrew/cask
-  - homebrew/cask-drivers
   - homebrew/cask-fonts
-  - jeromegamez/formulae
-  - github/gh
-  - aws/tap
+  - homebrew/cask-versions
+  - romkatv/powerlevel10k
+  - shivammathur/extensions
+  - shivammathur/php
 
 homebrew_apps:
-  - 1password
-  - alfred
-  - aws-vault
-  - bartender
-  - brave-browser
-  - cardhop
-  - cleanmymac
-  - dash
-  - discord
-  - docker
-  - fantastical
-  - firefox
-  - fliqlo
-  - font-fira-code
-  - gpg-suite
-  - iterm2
-  - jetbrains-toolbox
-  - mailmate
-  - multimc
-  - paw
-  - sequel-pro
-  - sonos
-  - spillo
-  - slack
-  - spotify
-  - sublime-merge
-  - sublime-text
-  - tableplus
-  - telegram
-  - transmit
-  - twitch
-  - whatsapp
+  - 1password # Password manager that keeps all passwords secure behind one password
+  - 1password-cli # Command-line helper for the 1Password password manager
+  - alfred # Application launcher and productivity software
+  - arc # Chromium based browser
+  - backblaze # Data backup and storage service
+  - cardhop # Contacts manager
+  - discord # Voice and text chat software
+  - dropbox # Client for the Dropbox cloud storage service (mostly used to sync Alfred preferences)
+  - fantastical # Calendar software
+  - fmail # Unofficial native application for Fastmail
+  - fliqlo # Flip clock screensaver
+  - font-fira-code-nerd-font # Developer targeted fonts with a high number of glyphs
+  - gpg-suite-no-mail # Tools to protect your files (used for signed git commits)
+  - iterm2 # Terminal emulator as alternative to Apple's Terminal app
+  - intellij-idea-ce # IDE for Java development - community edition
+  - karabiner-elements # Keyboard customizer (mostly used to map option a/o/u to ä/ö/ü on US keyboards)
+  - mailmate # Email client
+  - microsoft-office # Office suite
+  - microsoft-auto-update # Provides updates to various Microsoft products
+  - mongodb-compass # Interactive tool for analyzing MongoDB data
+  - phpstorm # PHP IDE by JetBrains
+  - rectangle # Move and resize windows using keyboard shortcuts or snap areas
+  - setapp # Collection of apps available by subscription
+  - slack # Team communication and collaboration software
+  - spotify # Music streaming service
+  - stoplight-studio # Editor for designing and documenting APIs
+  - sublime-merge # Git client
+  - sublime-text # Text editor for code, markup and prose
+  - telegram # Messaging app with a focus on speed and security
+  - transmit # File transfer application
+  - whatsapp # Desktop client for WhatsApp
+  - zoom # Video communication and virtual meeting platform
+
+  # currently installed via setapp
+  # - bartender # Menu bar icon organizer
+  # - cleanmymac # Tool to remove unnecessary files and folders from disk
+  # - cleanshot # Screen capturing tool
+  # - dash # API documentation browser and code snippet manager
+  # - rapidapi # HTTP client that helps testing and describing APIs
+  # - tableplus # Native GUI tool for relational databases
 
 homebrew_packages:
-  - aws-shell
-  - awscli
-  - aws-sam-cli
+  - awscli # Official Amazon AWS command-line interface
+  - ansible # Automate deployment, configuration, and upgrading
+  - aws-vault # Securely store and access AWS credentials in development environments
   - bash
-  - chag
-  - composer
-  - curl
-  - fasd
-  - gh
-  - git
-  - httpie
-  - imagemagick
-  - jq
+  - cookiecutter # Utility that creates projects from templates
+  - gh # GitHub command-line tool
+  - git # Distributed revision control system
+  - glab # GitLab command-line tool
+  - glow # Render markdown on the CLI
+  - grep # GNU grep, egrep and fgrep
+  - httpie # User-friendly cURL replacement (command-line HTTP client)
+  - jq # Lightweight and flexible command-line JSON processor
   - make
-  - node
-  - openssh
-  - php
-  - pkg-config
-  - python
-  - tree
-  - vim
-  - wget
-  - yadm
-  - watch
-  - zlib
+  - mas # Mac App Store command-line interface
+  - openssh # OpenBSD freely-licensed SSH connectivity tools
+  - romkatv/powerlevel10k/powerlevel10k
+  - shivammathur/php/php@8.2
+  - shivammathur/extensions/apcu@8.2
+  - shivammathur/extensions/grpc@8.2
+  - shivammathur/extensions/mongodb@8.2
+  - shivammathur/extensions/protobuf@8.2
+  - shivammathur/extensions/xdebug@8.2
+  - terraform # Tool to build, change, and version infrastructure
+  - terragrunt # Thin wrapper for Terraform e.g. for locking state
+  - tree # Display directories as trees (with optional color/HTML output)
+  - vim # Vi 'workalike' with many additional features
+  - wget # Internet file retriever
+  - yadm # Yet Another Dotfiles Manager
+  - watch # Executes a program periodically, showing output fullscreen
   - zsh
 
 mas_apps:
   - { name: 1Blocker, id: 1107421413 }
-  - { name: Bear, id: 1091189122 }
+  - { name: 1Password for Safari, id: 1569813296 }
+  - { name: Amphetamine, id: 937984704 }
+  - { name: JSONPeep, id: 1458969831 }
+  - { name: Mela, id: 1568924476 }
+  - { name: Numbers, id: 409203825 }
   - { name: Pages, id: 409201541 }
   - { name: Patterns, id: 429449079 }
-  - { name: Tweetbot, id: 1384080005 }
+  - { name: Pins, id: 1547106997 }
+  - { name: Pixelmator Pro, id: 1289583905 }
+  - { name: Refined GitHub, id: 1519867270 }
+  - { name: StopTheMadness, id: 1376402589 }
+  - { name: Things, id: 904280696 }
+  - { name: uBlacklist for Safari, id: 1547912640 }
