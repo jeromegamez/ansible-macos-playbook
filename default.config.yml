@@ -25,7 +25,6 @@ screensaver_ask_for_password_in_seconds: 5
 shell_path: /usr/local/bin/zsh
 
 homebrew_taps:
-  - homebrew/cask
   - homebrew/cask-fonts
   - homebrew/cask-versions
   - romkatv/powerlevel10k
